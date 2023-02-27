@@ -1,0 +1,28 @@
+@media (min-width: map_get($grid-breakpoints, xs)) {
+    .lg-page {
+        font-weight: bold;
+        .login-background {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: map_get($grid-breakpoints, sm)) {
+    .lg-page {
+        font-weight: bold;
+    }
+}
+
+@media (min-width: map_get($grid-breakpoints, md)) {
+    .lg-page {
+        font-weight: bold;
+    }
+}
+
+@media (min-width: map_get($grid-breakpoints, lg)) {
+    .lg-page {
+        font-weight: bold;
+    }
+}
+
+@import "../../node_modules/bootstrap/scss/variables"
