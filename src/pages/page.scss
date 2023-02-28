@@ -1,28 +1,35 @@
 @media (min-width: map_get($grid-breakpoints, xs)) {
     .lg-page {
-        font-weight: bold;
-        .login-background {
-            display: none;
+
+        .logo {
+            width: 74px;
+            height: 100%;
         }
     }
 }
 
 @media (min-width: map_get($grid-breakpoints, sm)) {
     .lg-page {
-        font-weight: bold;
+
+        .logo {
+            width: 167px;
+            height: 100%;
+        }
     }
 }
 
 @media (min-width: map_get($grid-breakpoints, md)) {
     .lg-page {
-        font-weight: bold;
+        .form-cont {
+            width: 450px;
+            .in-form-cont {
+
+            }
+        }
     }
 }
 
 @media (min-width: map_get($grid-breakpoints, lg)) {
-    .lg-page {
-        font-weight: bold;
-    }
 }
 
 @import "../../node_modules/bootstrap/scss/variables"

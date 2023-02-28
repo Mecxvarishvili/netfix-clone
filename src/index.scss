@@ -1,6 +1,11 @@
 
-$primary: #e50914;
-
+$primary: gray;
+$danger: #e50914;
+$secondary: #8c8c8c;
+$dark: #333;
+$warning: #e87c03;
+$info: #0071eb;
 
 @import "../node_modules//bootstrap/scss/bootstrap.scss";
 @import "./pages/page.scss";
+
