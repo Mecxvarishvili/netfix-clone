@@ -1,12 +1,19 @@
+
+.px-5p {
+    padding: 0 5%;
+}
+
+
 @media (min-width: map_get($grid-breakpoints, xs)) {
+    //Home Page 
+    .hm-page {
+
+    }
+    
+    //Log In page
     .lg-page {
         .font-13 {
             font-size: 13px;
-        }
-
-        .logo {
-            width: 74px;
-            height: 100%;
         }
         .form-cont {
             min-height: 550px;
@@ -17,15 +24,25 @@
             min-height: 220px;
         }
     }
+
+    .menu-logo {
+        width: 88px;
+        height: 100%;
+    }
+    .login-logo {
+        width: 74px;
+        height: 100%;
+    }
 }
 
 @media (min-width: map_get($grid-breakpoints, sm)) {
-    .lg-page {
+    .menu-logo {
+        width: 108px;
+    }
 
-        .logo {
-            width: 167px;
-            height: 100%;
-        }
+    .login-logo {
+        width: 167px;
+        height: 100%;
     }
 }
 
@@ -38,8 +55,16 @@
         }
     }
 }
-
 @media (min-width: map_get($grid-breakpoints, lg)) {
+    .menu-logo {
+        width: 134px;
+    }
+}
+
+@media (min-width: map_get($grid-breakpoints, xxl)) {
+    .menu-logo {
+        width: 167px;
+    }
 }
 
 @import "../../node_modules/bootstrap/scss/variables"

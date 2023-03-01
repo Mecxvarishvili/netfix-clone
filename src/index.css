@@ -10769,13 +10769,13 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.px-5p {
+  padding: 0 5%;
+}
+
 @media (min-width: 0) {
   .lg-page .font-13 {
     font-size: 13px;
-  }
-  .lg-page .logo {
-    width: 74px;
-    height: 100%;
   }
   .lg-page .form-cont {
     min-height: 550px;
@@ -10784,9 +10784,20 @@ textarea.form-control-lg {
     max-width: 1000px;
     min-height: 220px;
   }
+  .menu-logo {
+    width: 88px;
+    height: 100%;
+  }
+  .login-logo {
+    width: 74px;
+    height: 100%;
+  }
 }
 @media (min-width: 576px) {
-  .lg-page .logo {
+  .menu-logo {
+    width: 108px;
+  }
+  .login-logo {
     width: 167px;
     height: 100%;
   }
@@ -10796,6 +10807,140 @@ textarea.form-control-lg {
     width: 450px;
     min-height: 630px;
     margin-bottom: 90px;
+  }
+}
+@media (min-width: 992px) {
+  .menu-logo {
+    width: 134px;
+  }
+}
+@media (min-width: 1400px) {
+  .menu-logo {
+    width: 167px;
+  }
+}
+.fs-xs-1 {
+  font-size: 2.5rem;
+}
+
+.fs-xs-2 {
+  font-size: 2rem;
+}
+
+.fs-xs-3 {
+  font-size: 1.75rem;
+}
+
+.fs-xs-4 {
+  font-size: 1.5rem;
+}
+
+.fs-xs-5 {
+  font-size: 1.25rem;
+}
+
+.fs-xs-6 {
+  font-size: 1rem;
+}
+
+@media (min-width: 576px) {
+  .fs-sm-1 {
+    font-size: 2.5rem;
+  }
+  .fs-sm-2 {
+    font-size: 2rem;
+  }
+  .fs-sm-3 {
+    font-size: 1.75rem;
+  }
+  .fs-sm-4 {
+    font-size: 1.5rem;
+  }
+  .fs-sm-5 {
+    font-size: 1.25rem;
+  }
+  .fs-sm-6 {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .fs-md-1 {
+    font-size: 2.5rem;
+  }
+  .fs-md-2 {
+    font-size: 2rem;
+  }
+  .fs-md-3 {
+    font-size: 1.75rem;
+  }
+  .fs-md-4 {
+    font-size: 1.5rem;
+  }
+  .fs-md-5 {
+    font-size: 1.25rem;
+  }
+  .fs-md-6 {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 992px) {
+  .fs-lg-1 {
+    font-size: 2.5rem;
+  }
+  .fs-lg-2 {
+    font-size: 2rem;
+  }
+  .fs-lg-3 {
+    font-size: 1.75rem;
+  }
+  .fs-lg-4 {
+    font-size: 1.5rem;
+  }
+  .fs-lg-5 {
+    font-size: 1.25rem;
+  }
+  .fs-lg-6 {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .fs-xl-1 {
+    font-size: 2.5rem;
+  }
+  .fs-xl-2 {
+    font-size: 2rem;
+  }
+  .fs-xl-3 {
+    font-size: 1.75rem;
+  }
+  .fs-xl-4 {
+    font-size: 1.5rem;
+  }
+  .fs-xl-5 {
+    font-size: 1.25rem;
+  }
+  .fs-xl-6 {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1400px) {
+  .fs-xxl-1 {
+    font-size: 2.5rem;
+  }
+  .fs-xxl-2 {
+    font-size: 2rem;
+  }
+  .fs-xxl-3 {
+    font-size: 1.75rem;
+  }
+  .fs-xxl-4 {
+    font-size: 1.5rem;
+  }
+  .fs-xxl-5 {
+    font-size: 1.25rem;
+  }
+  .fs-xxl-6 {
+    font-size: 1rem;
   }
 }
 

@@ -9,3 +9,13 @@ $info: #0071eb;
 @import "../node_modules//bootstrap/scss/bootstrap.scss";
 @import "./pages/page.scss";
 
+@each $br-key, $br-value in $grid-breakpoints {
+  @include media-breakpoint-up($br-key) {
+    @each $fs-key, $fs-value in $font-sizes {
+
+        .fs-#{$br-key}-#{$fs-key} {
+            font-size: $fs-value
+        }
+    }
+  }
+}
