@@ -10770,9 +10770,19 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 0) {
+  .lg-page .font-13 {
+    font-size: 13px;
+  }
   .lg-page .logo {
     width: 74px;
     height: 100%;
+  }
+  .lg-page .form-cont {
+    min-height: 550px;
+  }
+  .lg-page .footer-cont {
+    max-width: 1000px;
+    min-height: 220px;
   }
 }
 @media (min-width: 576px) {
@@ -10784,6 +10794,8 @@ textarea.form-control-lg {
 @media (min-width: 768px) {
   .lg-page .form-cont {
     width: 450px;
+    min-height: 630px;
+    margin-bottom: 90px;
   }
 }
 
