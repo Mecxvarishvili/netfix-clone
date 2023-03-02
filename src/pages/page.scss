@@ -7,6 +7,10 @@ mx-75 {
     margin: 0 75px;
 }
 
+input {
+    outline: none;
+}
+
 @media (min-width: map_get($grid-breakpoints, xs)) {
     //Home Page 
     .hm-page {
@@ -23,6 +27,9 @@ mx-75 {
             &:hover {
                 background-color: $primary;
             }
+        }
+        .b-opacity {
+            background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent 40%,transparent 75%,rgba(0,0,0,.8));
         }
 
     }
@@ -77,10 +84,30 @@ mx-75 {
         width: 134px;
     }
 }
+@media (min-width: map_get($grid-breakpoints, lg)) {
+    //Home Page
+    .hm-page {
+
+        .button-cont {
+            max-width: 212px;
+        }
+    }
+}
 
 @media (min-width: map_get($grid-breakpoints, xxl)) {
     .menu-logo {
         width: 167px;
+    }
+    //Home page
+    .hm-page {
+        .input-cont {
+            height: 70px;
+        }
+    
+        .button-cont {
+            height: 70px;
+        }
+
     }
 }
 

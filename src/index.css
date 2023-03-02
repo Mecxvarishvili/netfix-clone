@@ -11616,6 +11616,10 @@ mx-75 {
   margin: 0 75px;
 }
 
+input {
+  outline: none;
+}
+
 @media (min-width: 0) {
   .hm-page .main-box {
     max-width: 750px;
@@ -11629,6 +11633,9 @@ mx-75 {
   }
   .hm-page .button-cont:hover {
     background-color: #222;
+  }
+  .hm-page .b-opacity {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0, transparent 40%, transparent 75%, rgba(0, 0, 0, 0.8));
   }
   .lg-page .font-13 {
     font-size: 13px;
@@ -11670,9 +11677,20 @@ mx-75 {
     width: 134px;
   }
 }
+@media (min-width: 992px) {
+  .hm-page .button-cont {
+    max-width: 212px;
+  }
+}
 @media (min-width: 1400px) {
   .menu-logo {
     width: 167px;
+  }
+  .hm-page .input-cont {
+    height: 70px;
+  }
+  .hm-page .button-cont {
+    height: 70px;
   }
 }
 .fs-xs-9 {
