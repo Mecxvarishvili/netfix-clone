@@ -11,7 +11,17 @@ input {
     outline: none;
 }
 
+.font-13 {
+    font-size: 13px;
+}
+
 @media (min-width: map_get($grid-breakpoints, xs)) {
+    //footer 
+    .footer {
+        .footer-cont {
+            max-width: 900px;
+        }
+    }
     //Home Page 
     .hm-page {
         .main-box {
@@ -36,9 +46,6 @@ input {
     
     //Log In page
     .lg-page {
-        .font-13 {
-            font-size: 13px;
-        }
         .form-cont {
             min-height: 550px;
         }

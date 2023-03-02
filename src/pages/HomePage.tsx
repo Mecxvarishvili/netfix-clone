@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Image from "react-bootstrap/Image"
 import Form from "react-bootstrap/Form"
-import InputGroup from "react-bootstrap/InputGroup"
 import page from './page';
 import { Link } from "react-router-dom"
+import Footer from '../components/Footer';
 
 const HomePage = () => {
     const contRef = useRef<HTMLDivElement | any >(null)
@@ -47,12 +47,8 @@ const HomePage = () => {
                         </Form>
                     </div>
                 </div>
-                <div className="position-relative py-5 px-5p bg-black">
-
-                </div>
-                <div></div>
-                <div></div>
             </div>
+            <Footer />
         </div>
     );
 };
