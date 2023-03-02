@@ -1,7 +1,7 @@
 
-$primary: gray;
-$danger: #e50914;
+$primary: #222;
 $secondary: #8c8c8c;
+$danger: #e50914;
 $dark: #333;
 $warning: #e87c03;
 $info: #0071eb;
@@ -9,9 +9,29 @@ $info: #0071eb;
 @import "../node_modules//bootstrap/scss/bootstrap.scss";
 @import "./pages/page.scss";
 
+
+$my-default-font-size: 1rem;
+
+$font-points: (0.9, 1, 1.25, 1.5, 1.625, 2, 3, 4, 5,);
+
+$custom-font-size: (
+  09: $my-default-font-size * 0.9,
+  1: $my-default-font-size,
+  1125: $my-default-font-size * 1.125,
+  12: $my-default-font-size * 1.2,
+  125: $my-default-font-size * 1.25,
+  15: $my-default-font-size * 1.5,
+  1625: $my-default-font-size * 1.625,
+  175: $my-default-font-size * 1.75,
+  2: $my-default-font-size * 2,
+  3125: $my-default-font-size * 3.125,
+  4: $my-default-font-size * 4
+
+);
+
 @each $br-key, $br-value in $grid-breakpoints {
   @include media-breakpoint-up($br-key) {
-    @each $fs-key, $fs-value in $font-sizes {
+    @each $fs-key, $fs-value in $custom-font-size {
 
         .fs-#{$br-key}-#{$fs-key} {
             font-size: $fs-value

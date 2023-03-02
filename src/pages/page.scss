@@ -3,10 +3,27 @@
     padding: 0 5%;
 }
 
+mx-75 {
+    margin: 0 75px;
+}
 
 @media (min-width: map_get($grid-breakpoints, xs)) {
     //Home Page 
     .hm-page {
+        .main-box {
+            max-width: 750px;
+        }
+        .input-cont {
+            max-width: 500px;
+            height: 50px
+        }
+
+        .button-cont {
+            max-width: 130px;
+            &:hover {
+                background-color: $primary;
+            }
+        }
 
     }
     
