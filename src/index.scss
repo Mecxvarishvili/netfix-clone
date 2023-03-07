@@ -7,6 +7,10 @@ $danger: #e50914;
 $warning: #e87c03;
 $info: #0071eb;
 
+$form-floating-padding-y:12px;
+$form-floating-height: 50px;
+$form-floating-padding-x:20px;
+
 @import "../node_modules//bootstrap/scss/bootstrap.scss";
 @import "./pages/page.scss";
 

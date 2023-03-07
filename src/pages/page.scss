@@ -16,6 +16,9 @@ input {
 }
 
 @media (min-width: map_get($grid-breakpoints, xs)) {
+    body {
+        background-color: black;
+    }
     //footer 
     .footer {
         .footer-cont {
