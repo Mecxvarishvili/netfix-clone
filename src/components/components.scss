@@ -1,0 +1,43 @@
+
+
+.header {
+    .header-logo {
+        width: 84px;
+    }
+
+    .search-input {
+        width: 115px;
+        height: 28px;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .header {
+
+        .search-input {
+            width: 178px;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .header {
+        .header-logo {
+            width: 120px;
+        }
+        .search-input {
+            width: 160px;
+        }
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .header {
+        .header-logo {
+            width: 92px;
+        }
+        .search-input {
+            width: 260px;
+        }
+    }
+}

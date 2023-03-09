@@ -11,9 +11,14 @@ $form-floating-padding-y:12px;
 $form-floating-height: 50px;
 $form-floating-padding-x:20px;
 
+
+.ytp-watermark {
+  display: none;
+}
+
 @import "../node_modules//bootstrap/scss/bootstrap.scss";
 @import "./pages/page.scss";
-
+@import "./components/components.scss";
 
 $my-default-font-size: 1rem;
 

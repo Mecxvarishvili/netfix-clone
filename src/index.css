@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.ytp-watermark {
+  display: none;
+}
+
 /*!
  * Bootstrap  v5.3.0-alpha1 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -11698,6 +11702,35 @@ input {
   }
   .hm-page .button-cont {
     height: 70px;
+  }
+}
+.header .header-logo {
+  width: 84px;
+}
+.header .search-input {
+  width: 115px;
+  height: 28px;
+}
+
+@media (min-width: 576px) {
+  .header .search-input {
+    width: 178px;
+  }
+}
+@media (min-width: 768px) {
+  .header .header-logo {
+    width: 120px;
+  }
+  .header .search-input {
+    width: 160px;
+  }
+}
+@media (min-width: 1200px) {
+  .header .header-logo {
+    width: 92px;
+  }
+  .header .search-input {
+    width: 260px;
   }
 }
 .fs-xs-9 {
