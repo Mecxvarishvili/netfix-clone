@@ -1,29 +1,26 @@
 
-
-.header {
-    .header-logo {
-        width: 84px;
-    }
-
-    .search-input {
-        width: 115px;
-        height: 28px;
-    }
+//custom padding
+.px-s {
+    padding: 0 20px;
 }
-
 @include media-breakpoint-up(sm) {
-    .header {
 
+    .px-s {
+        padding: 0 30px;
+    }
+
+    .header {
         .search-input {
             width: 178px;
         }
     }
 }
 
-@include media-breakpoint-up(md) {
+    @include media-breakpoint-up(md) {
     .header {
-        .header-logo {
+        .netflix-logo {
             width: 120px;
+            height: 34px;
         }
         .search-input {
             width: 160px;
@@ -32,9 +29,11 @@
 }
 
 @include media-breakpoint-up(xl) {
+    .px-s {
+        padding: 0 60px;
+    }
     .header {
-        .header-logo {
-            width: 92px;
+        .netflix-logo {
         }
         .search-input {
             width: 260px;

@@ -43,7 +43,7 @@ const LogInPage = () => {
             </div>
             <div className="start-9 w-100">
                 <Link to={page.HOME}>
-                    <Image className="login-logo m-3 m-sm-4" src={require("../images/Logonetflix.png")}/>
+                    <Image className="login-logo m-3 m-sm-4" src={require("../images/netflixlogo.png")}/>
                 </Link>
             </div>
             <div className="form-cont px-4 p-md-5 mx-auto bg-black bg-opacity-75 rounded" >

@@ -4,7 +4,7 @@ import Image from "react-bootstrap/Image"
 import Form from "react-bootstrap/Form"
 import page from './page';
 import { Link } from "react-router-dom"
-import Footer from '../components/Footer';
+import Footer from '../layout/footer/Footer';
 
 const HomePage = () => {
     const contRef = useRef<HTMLDivElement | any >(null)
@@ -22,7 +22,7 @@ const HomePage = () => {
         <div className="hm-page text-white">
             <header className="position-relative pt-4" >
                 <div className="d-flex justify-content-between mx-2 mx-sm-4 mx-lg-5">
-                    <Image className='menu-logo' src={require("../images/Logonetflix.png")}/>
+                    <Image className='menu-logo' src={require("../images/netflixlogo.png")}/>
                     <div>
                         <Link className="btn btn-danger btn-sm border-0 fs-sm-1 fs-xs-09 px-sm-3" to={page.LOGIN} >Sign In</Link>
                     </div>

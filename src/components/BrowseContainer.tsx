@@ -1,6 +1,9 @@
 import React from 'react';
 
-const BrowseContainer = () => {
+interface Props {
+    data: Object
+}
+const BrowseContainer = ({data}: Props) => {
     
     return (
         <div>

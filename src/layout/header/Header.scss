@@ -1,0 +1,62 @@
+
+//header
+.header {
+    background: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
+    z-index: 999;
+
+    .nav-bar {
+        height: 50px;
+        width: 250px;
+        top: 48px;
+    }
+    
+    .navigation-menu {
+        width: 24px;
+        height: 24px;
+        margin-right: 20px;
+    }
+    .browse-link {
+        width: 84px;
+        height: 24px;
+        display: contents;
+    }
+    .netflix-logo {
+        width: 84px;
+        height: 24px;
+    }
+
+    .search-input {
+        width: 115px;
+        height: 28px;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .header {
+        .search-input {
+            width: 178px;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .header {
+        .netflix-logo {
+            width: 120px;
+            height: 34px;
+        }
+        .search-input {
+            width: 160px;
+        }
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .header {
+        .netflix-logo {
+        }
+        .search-input {
+            width: 260px;
+        }
+    }
+}
