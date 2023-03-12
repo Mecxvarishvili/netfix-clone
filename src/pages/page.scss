@@ -15,63 +15,58 @@ input {
     font-size: 13px;
 }
 
-@media (min-width: map_get($grid-breakpoints, xs)) {
-    body {
-        background-color: black;
+body {
+    background-color: black;
+}
+//footer 
+.footer {
+    .footer-cont {
+        max-width: 900px;
     }
-    //footer 
-    .footer {
-        .footer-cont {
-            max-width: 900px;
+}
+//Home Page 
+.hm-page {
+    .main-box {
+        max-width: 750px;
+    }
+    .input-cont {
+        max-width: 500px;
+        height: 50px
+    }
+    .button-cont {
+        max-width: 130px;
+        &:hover {
+            background-color: $primary;
         }
     }
-    //Home Page 
-    .hm-page {
-        .main-box {
-            max-width: 750px;
-        }
-        .input-cont {
-            max-width: 500px;
-            height: 50px
-        }
+    .b-opacity {
+        background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent 40%,transparent 75%,rgba(0,0,0,.8));
+    }
+}
 
-        .button-cont {
-            max-width: 130px;
-            &:hover {
-                background-color: $primary;
-            }
-        }
-        .b-opacity {
-            background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent 40%,transparent 75%,rgba(0,0,0,.8));
-        }
+//Log In page
+.lg-page {
+    .form-cont {
+        min-height: 550px;
+    }
+    .footer-cont {
+        max-width: 1000px;
+        min-height: 220px;
+    }
+}
 
-    }
-    
-    //Log In page
-    .lg-page {
-        .form-cont {
-            min-height: 550px;
-        }
+.menu-logo {
+    width: 88px;
+    height: 100%;
+}
+.login-logo {
+    width: 74px;
+    height: 100%;
+}
 
-        .footer-cont {
-            max-width: 1000px;
-            min-height: 220px;
-        }
-    }
-
-    .menu-logo {
-        width: 88px;
-        height: 100%;
-    }
-    .login-logo {
-        width: 74px;
-        height: 100%;
-    }
-
-    // browse Page
-    .bw-page {
-        
-    }
+// browse Page
+.bw-page {
+    margin-top: 100px;
 }
 
 @media (min-width: map_get($grid-breakpoints, sm)) {

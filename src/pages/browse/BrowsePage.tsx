@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import HomeHeader from '../layout/header/BrowseHeader';
-import BrowseImage from '../components/BrowseImage';
-import BrowseContainer from '../components/BrowseContainer';
-import Loader from '../components/Loader';
+import HomeHeader from '../../layout/header/BrowseHeader';
+import BrowseImage from './BrowseImage';
+import Loader from '../../components/Loader';
+import MoviesCarousel from '../../components/MoviesCarousel';
 
 const BrowsePage = () => {
     const [ data, setData ] = useState([])
@@ -21,10 +21,10 @@ const BrowsePage = () => {
     }, [])
     return (
         <Loader isLoading={isLoading} >
+            <HomeHeader />
             <div className='bw-page' >
-                <HomeHeader />
                 <BrowseImage data={data[Math.floor(Math.random() * data.length)]} />
-                <BrowseContainer data={data}/>
+                <MoviesCarousel data={data}/>
             </div>
         </Loader>
     );

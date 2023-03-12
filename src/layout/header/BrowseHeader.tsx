@@ -9,7 +9,7 @@ const BrowseHeader = () => {
     const [ navBar, setNavBar ] = useState<boolean>(false)
 
     return (
-        <div className='header px-s py-2 py-md-3 position-fixed w-100' >
+        <div className='header px-s py-2 py-md-3 position-fixed w-100 start-0 top-0' >
             <NavBar isOpen={navBar} />
             <div className="d-flex justify-content-between" >
                 <div className='d-md-flex' >

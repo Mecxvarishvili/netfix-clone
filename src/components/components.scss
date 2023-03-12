@@ -16,7 +16,24 @@
     }
 }
 
-    @include media-breakpoint-up(md) {
+
+//carousel
+
+.slider-container {
+    .slider-card {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .slider-arrow {
+        width: 100%;
+        
+    }
+}
+
+@include media-breakpoint-up(md) {
     .header {
         .netflix-logo {
             width: 120px;
