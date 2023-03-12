@@ -11734,9 +11734,13 @@ input {
   z-index: 999;
 }
 .header .nav-bar {
-  height: 50px;
   width: 250px;
   top: 48px;
+  z-index: 998;
+}
+.header .nav-bar-background {
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 .header .navigation-menu {
   width: 24px;
