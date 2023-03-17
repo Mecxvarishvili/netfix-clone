@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import HomeHeader from '../../layout/header/BrowseHeader';
 import BrowseImage from './BrowseImage';
 import Loader from '../../components/Loader';
-import MoviesCarousel from '../../components/MoviesCarousel';
-import SliderLoader from '../../components/SliderLoader';
+import MoviesSlider from '../../components/MoviesSlider';
+import BrowseFooter from './BrowseFooter';
 
 const BrowsePage = () => {
     const [ data, setData ] = useState([])
@@ -20,13 +20,17 @@ const BrowsePage = () => {
                 setIsLoading(false)
             })
     }, [])
+    const items: string[] = ["Audio Description", "Help Center", "Gift Cards", "Media Center", "Investor Relations", "Jobs", "Terms of Use", "Privacy", "Legal Notices", "Cookie Preferences", "Corporate Information", "Contact Us"]
+    console.log(items.length)
     return (
         <Loader isLoading={isLoading} >
             <HomeHeader />
             <div className='bw-page' >
                 <BrowseImage data={data[Math.floor(Math.random() * data.length)]} />
-                <MoviesCarousel data={data}/>
-                <SliderLoader />
+                <MoviesSlider data={data}/>
+                <MoviesSlider data={data}/>
+                <MoviesSlider data={data}/>
+                <BrowseFooter items={items} />
             </div>
         </Loader>
     );

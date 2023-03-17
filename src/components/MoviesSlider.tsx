@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from "react-slick";
 import SliderCard from './SliderCard';
 import SliderArrow from './SliderArrow';
+import SliderLoader from './SliderLoader';
 interface Props {
     data: {
         img: string[]
         id: string
     }[],
 }
-const MoviesCarousel = ({data}: Props) => {
+const MoviesSlider = ({data}: Props) => {
+  const [ isLoading, setIsLoading ] = useState(true)
     const settings =  {
-        dots: true,
         infinite: false,
         speed: 500,
         slidesToShow: 4,
@@ -26,7 +27,6 @@ const MoviesCarousel = ({data}: Props) => {
                 slidesToShow: 6,
                 slidesToScroll: 6,
                 infinite: true,
-                dots: true
               }
             },
             {
@@ -35,7 +35,6 @@ const MoviesCarousel = ({data}: Props) => {
                 slidesToShow: 5,
                 slidesToScroll: 5,
                 infinite: true,
-                dots: true,
                 arrows: true
               }
             },
@@ -45,7 +44,6 @@ const MoviesCarousel = ({data}: Props) => {
                 slidesToShow: 5,
                 slidesToScroll: 5,
                 infinite: true,
-                dots: true,
               }
             },
           {
@@ -54,7 +52,6 @@ const MoviesCarousel = ({data}: Props) => {
               slidesToShow: 4,
               slidesToScroll: 4,
               infinite: true,
-              dots: true
             }
           },
           {
@@ -74,7 +71,14 @@ const MoviesCarousel = ({data}: Props) => {
           }
         ]
     }
+    useEffect(() => {
+      if(data) {
+        setIsLoading(false)
+      }
+    }, [data])
+    
     return (
+      <SliderLoader isLoading={isLoading} >
         <div className="slider-container px-s" >
             <div className="fs-xs-12 fs-xl text-white fw-bold mb-2" > Popular on Netflix</div>
             <Slider {...settings} >
@@ -83,7 +87,8 @@ const MoviesCarousel = ({data}: Props) => {
                 )))}
             </Slider>
         </div>
+      </SliderLoader>
     );
 };
 
-export default MoviesCarousel;
+export default MoviesSlider;

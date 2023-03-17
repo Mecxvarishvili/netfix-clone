@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'react-bootstrap/Image';
 
 const SliderArrow = ({img}: {img: string }) => {
     console.log(img)

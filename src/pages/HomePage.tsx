@@ -30,7 +30,7 @@ const HomePage = () => {
                 </div>
             </header>
             <div>
-                <div ref={contRef} className="position-relative py-5 px-5p border-bottom border-5 border-primary">
+                <div ref={contRef} className="position-relative py-5 px-5p border-bottom border-5"> 
                     <div style={{zIndex: -1, top: -90, height: `${contHeight}px`}} className="position-absolute start-0 w-100 bg-black">
                         <Image className='w-100 h-100 position-relative object-fit-cover opacity-50' src={require("../images/background-image2.jpg")} />
                         <div className='b-opacity position-absolute top-0 start-0 w-100 h-100'></div>

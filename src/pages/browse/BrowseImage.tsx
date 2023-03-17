@@ -14,7 +14,10 @@ interface Props {
 const BrowseImage = ({data}: Props) => {
     return (
         <div className="d-none d-xl-block position-relative text-white banner-container" >
-            <Image className="w-100 position-absolute" style={{zIndex: "-1"}}  src={data.img[1]} />
+            <div className="banner-container-image position-absolute w-100" >
+                <Image className="w-100 position-absolute" style={{zIndex: "-1"}}  src={data.img[1]} />
+                <div className="image-shadow w-100 position-absolute " ></div>
+            </div>
             <div className='px-s h-100 w-100 d-flex align-items-end'>
                 <div className='describe-box mb-5' >
                     <div>
@@ -22,9 +25,8 @@ const BrowseImage = ({data}: Props) => {
                     </div>
                     <div>{data.describe}</div>
                     <div className='d-flex' >
-                        
-                        <Button className="px-4 me-3 fs-xs-15 bg-white text-black fw-medium d-flex align-items-center" > <GrPlayFill /> &nbsp;<span>Play</span></Button>
-                        <Button className="px-4 fs-xs-15 fw-medium bg-tertiary d-flex align-items-center" ><AiOutlineInfoCircle /> &nbsp;<span> More Info</span></Button>
+                        <Button className="px-4 me-3 fs-lg-125 fs-xxl-15 bg-white text-black fw-medium d-flex align-items-center border-0 " > <GrPlayFill /> &nbsp;<span>Play</span></Button>
+                        <Button className="px-4 fs-lg-125 fs-xxl-15 fw-medium bg-tertiary d-flex align-items-center border-0" ><AiOutlineInfoCircle /> &nbsp;<span> More Info</span></Button>
                     </div>
                 </div>
             </div>

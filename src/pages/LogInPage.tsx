@@ -8,13 +8,13 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { Link } from "react-router-dom"
 import page from './page';
-import { object, Asserts, string } from 'yup';
-import { Form as FormF, Formik, FormikHelpers, useFormik } from 'formik';
+import { object, string } from 'yup';
+import { useFormik } from 'formik';
 import InputPlacement from '../components/InputPlacement';
 
 const LogInPage = () => {
     interface Values  {
-        login: string,
+        email: string,
         password: string
     }
 
