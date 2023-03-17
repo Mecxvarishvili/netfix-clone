@@ -66,7 +66,21 @@ body {
 
 // browse Page
 .bw-page {
-    margin-top: 100px;
+
+    //banner component
+    .banner-container {
+        height: 36.5vw;
+        .describe-box {
+            width: 39%;
+            div {
+                margin-top: 1.5vw;
+            }
+        }
+        .maturity-cont {
+            padding-right: 60px;
+            background-color: rgba(51,51,51,.6);
+        }
+    }
 }
 
 @media (min-width: map_get($grid-breakpoints, sm)) {
