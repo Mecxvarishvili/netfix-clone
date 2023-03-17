@@ -11724,6 +11724,35 @@ body {
   padding: 0 20px;
 }
 
+.slider-loader-cont .slider-loader-title {
+  width: 100px;
+  height: 20px;
+  background: #1a1a1a;
+  margin-bottom: 10px;
+}
+.slider-loader-cont .slider-loader-animation-cont .slider-loader-animation-box .slider-loader-animation {
+  background: #1a1a1a;
+  animation-duration: 3.6s;
+  animation-iteration-count: infinite;
+  animation-name: slider-loader-animation;
+  animation-timing-function: ease-in-out;
+  padding: 27.25% 0;
+}
+
+@keyframes slider-loader-animation {
+  0% {
+    background-color: #1a1a1a;
+  }
+  25% {
+    background-color: #333;
+  }
+  50% {
+    background-color: #1a1a1a;
+  }
+  100% {
+    background-color: #1a1a1a;
+  }
+}
 @media (min-width: 501px) {
   .px-s {
     padding: 0 30px;

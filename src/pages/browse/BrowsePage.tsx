@@ -3,6 +3,7 @@ import HomeHeader from '../../layout/header/BrowseHeader';
 import BrowseImage from './BrowseImage';
 import Loader from '../../components/Loader';
 import MoviesCarousel from '../../components/MoviesCarousel';
+import SliderLoader from '../../components/SliderLoader';
 
 const BrowsePage = () => {
     const [ data, setData ] = useState([])
@@ -25,6 +26,7 @@ const BrowsePage = () => {
             <div className='bw-page' >
                 <BrowseImage data={data[Math.floor(Math.random() * data.length)]} />
                 <MoviesCarousel data={data}/>
+                <SliderLoader />
             </div>
         </Loader>
     );
