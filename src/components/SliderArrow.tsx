@@ -1,11 +1,20 @@
 import React from 'react';
+import { MdArrowBackIos, MdArrowForwardIos } from 'react-icons/md'
 
-const SliderArrow = ({img}: {img: string }) => {
-    console.log(img)
+interface Props  {
+    direction?: string,
+    className?: string,
+    style?: object,
+    onClick?: React.MouseEventHandler<HTMLSpanElement>,
+}
+
+const SliderArrow = ({ className, style, onClick, direction }: Props) => {
     return (
-        <div className="slider-arrow " >
-            {/* <Image /> */}
-            <span>ssgwert</span>
+        <div className={className+" slider-arrow  text-white fs-1"} style={{...style}} onClick={onClick}>
+            {direction === "right" ?
+            <MdArrowForwardIos className=""   /> :
+            <MdArrowBackIos />
+            }
         </div>
     );
 };

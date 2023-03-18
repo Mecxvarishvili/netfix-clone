@@ -8,7 +8,7 @@ interface Props {
 }
 const SliderCard = ({data}: Props) => {
     return (
-        <div className="slider-card" >
+        <div className="slider-card " >
             <Image src={data.img[1]} />
         </div>
     );

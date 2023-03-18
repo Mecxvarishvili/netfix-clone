@@ -11,7 +11,7 @@ interface Props {
         pegi: string
     }
 }
-const BrowseImage = ({data}: Props) => {
+const BrowseBanner = ({data}: Props) => {
     return (
         <div className="d-none d-xl-block position-relative text-white banner-container" >
             <div className="banner-container-image position-absolute w-100" >
@@ -25,14 +25,14 @@ const BrowseImage = ({data}: Props) => {
                     </div>
                     <div>{data.describe}</div>
                     <div className='d-flex' >
-                        <Button className="px-4 me-3 fs-lg-125 fs-xxl-15 bg-white text-black fw-medium d-flex align-items-center border-0 " > <GrPlayFill /> &nbsp;<span>Play</span></Button>
+                        <Button className="px-4 me-3 fs-lg-125 fs-xxl-15 bg-white text-black fw-medium d-flex align-items-center border-0" > <GrPlayFill /> &nbsp;<span>Play</span></Button>
                         <Button className="px-4 fs-lg-125 fs-xxl-15 fw-medium bg-tertiary d-flex align-items-center border-0" ><AiOutlineInfoCircle /> &nbsp;<span> More Info</span></Button>
                     </div>
                 </div>
             </div>
-            <div className="maturity-cont position-absolute end-0 bottom-0 mb-5 ps-3 py-1 fs-xs-1125 border-start border-3" >{data.pegi}</div>
+            <div className="maturity-cont position-absolute end-0 bottom-0 mb-5 ps-3 py-1 fs-xs-1125 border-start border-3 border-white" >{data.pegi}</div>
         </div>
     );
 };
 
-export default BrowseImage;
+export default BrowseBanner;

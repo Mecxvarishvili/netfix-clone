@@ -15,11 +15,11 @@ const MoviesSlider = ({data}: Props) => {
         infinite: false,
         speed: 500,
         slidesToShow: 4,
-        slidesToScroll: 4,
         initialSlide: 0,
         arrows: false,
-        prevArrow: <SliderArrow img="left"/>,
-        nextArrow: <SliderArrow img="right"/>,
+        prevArrow: <SliderArrow direction="left"/>,
+        nextArrow: <SliderArrow direction="right"/>,
+        // swipeToSlide: true,
         responsive: [
             {
               breakpoint: 99999999,
@@ -27,6 +27,7 @@ const MoviesSlider = ({data}: Props) => {
                 slidesToShow: 6,
                 slidesToScroll: 6,
                 infinite: true,
+                arrows: true
               }
             },
             {
@@ -42,7 +43,6 @@ const MoviesSlider = ({data}: Props) => {
               breakpoint: 1200,
               settings: {
                 slidesToShow: 5,
-                slidesToScroll: 5,
                 infinite: true,
               }
             },
@@ -50,7 +50,6 @@ const MoviesSlider = ({data}: Props) => {
             breakpoint: 1101,
             settings: {
               slidesToShow: 4,
-              slidesToScroll: 4,
               infinite: true,
             }
           },
@@ -58,15 +57,12 @@ const MoviesSlider = ({data}: Props) => {
             breakpoint: 801,
             settings: {
               slidesToShow: 3,
-              slidesToScroll: 3,
-              initialSlide: 3
             }
           },
           {
             breakpoint: 501,
             settings: {
               slidesToShow: 2,
-              slidesToScroll: 2,
             }
           }
         ]
@@ -79,9 +75,9 @@ const MoviesSlider = ({data}: Props) => {
     
     return (
       <SliderLoader isLoading={isLoading} >
-        <div className="slider-container px-s" >
+        <div className="slider-container px-s position-relative" >
             <div className="fs-xs-12 fs-xl text-white fw-bold mb-2" > Popular on Netflix</div>
-            <Slider {...settings} >
+            <Slider {...settings}>
                 {data.map((data => (
                     <SliderCard key={data.id} data={data}/>
                 )))}

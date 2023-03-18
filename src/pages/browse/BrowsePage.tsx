@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import HomeHeader from '../../layout/header/BrowseHeader';
-import BrowseImage from './BrowseImage';
 import Loader from '../../components/Loader';
 import MoviesSlider from '../../components/MoviesSlider';
 import BrowseFooter from './BrowseFooter';
+import BrowseBanner from './BrowseBanner';
 
 const BrowsePage = () => {
     const [ data, setData ] = useState([])
@@ -26,7 +26,7 @@ const BrowsePage = () => {
         <Loader isLoading={isLoading} >
             <HomeHeader />
             <div className='bw-page' >
-                <BrowseImage data={data[Math.floor(Math.random() * data.length)]} />
+                <BrowseBanner data={data[Math.floor(Math.random() * data.length)]} />
                 <MoviesSlider data={data}/>
                 <MoviesSlider data={data}/>
                 <MoviesSlider data={data}/>
