@@ -17,8 +17,6 @@ const MoviesSlider = ({data}: Props) => {
         slidesToShow: 4,
         initialSlide: 0,
         arrows: false,
-        prevArrow: <SliderArrow direction="left"/>,
-        nextArrow: <SliderArrow direction="right"/>,
         // swipeToSlide: true,
         responsive: [
             {
@@ -27,7 +25,7 @@ const MoviesSlider = ({data}: Props) => {
                 slidesToShow: 6,
                 slidesToScroll: 6,
                 infinite: true,
-                arrows: true
+                arrows: true,
               }
             },
             {
@@ -36,7 +34,9 @@ const MoviesSlider = ({data}: Props) => {
                 slidesToShow: 5,
                 slidesToScroll: 5,
                 infinite: true,
-                arrows: true
+                arrows: true,
+                prevArrow: <SliderArrow direction="left"/>,
+                nextArrow: <SliderArrow direction="right"/>,
               }
             },
             {
