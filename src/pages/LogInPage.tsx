@@ -13,11 +13,6 @@ import { useFormik } from 'formik';
 import InputPlacement from '../components/InputPlacement';
 
 const LogInPage = () => {
-    interface Values  {
-        email: string,
-        password: string
-    }
-
     const formik = useFormik({
         initialValues: {
             email: "",

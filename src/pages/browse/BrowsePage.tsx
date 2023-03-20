@@ -4,6 +4,7 @@ import Loader from '../../components/Loader';
 import MoviesSlider from '../../components/MoviesSlider';
 import BrowseFooter from './BrowseFooter';
 import BrowseBanner from './BrowseBanner';
+import SliderFocusedCard from '../../components/SliderFocusedCard';
 
 const BrowsePage = () => {
     const [ data, setData ] = useState([])
@@ -21,7 +22,6 @@ const BrowsePage = () => {
             })
     }, [])
     const items: string[] = ["Audio Description", "Help Center", "Gift Cards", "Media Center", "Investor Relations", "Jobs", "Terms of Use", "Privacy", "Legal Notices", "Cookie Preferences", "Corporate Information", "Contact Us"]
-    console.log(items.length)
     return (
         <Loader isLoading={isLoading} >
             <HomeHeader />
@@ -31,6 +31,7 @@ const BrowsePage = () => {
                 <MoviesSlider data={data}/>
                 <MoviesSlider data={data}/>
                 <BrowseFooter items={items} />
+                <SliderFocusedCard />
             </div>
         </Loader>
     );
