@@ -30,8 +30,8 @@ const BrowsePage = () => {
                 <MoviesSlider data={data}/>
                 <MoviesSlider data={data}/>
                 <MoviesSlider data={data}/>
-                <BrowseFooter items={items} />
                 <SliderFocusedCard />
+                <BrowseFooter items={items} />
             </div>
         </Loader>
     );

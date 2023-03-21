@@ -1,16 +1,92 @@
-import React, { useEffect } from 'react';
-import { useAppSelector } from '../store/hooks';
+import React, { useEffect, useRef, useState } from 'react';
+import { useAppDispatch, useAppSelector } from '../store/hooks';
 import { getFocusCard } from '../store/selector';
 import { Image } from 'react-bootstrap';
+import { disableFocusCard } from '../store/focusCard/focusCardSlice';
+import { Link } from 'react-router-dom';
+import { FaPlay } from 'react-icons/fa';
+import { IoIosArrowDown } from 'react-icons/io';
 
 const SliderFocusedCard = () => {
-    const {data, rect} = useAppSelector(getFocusCard)
+    const {data, rect, isFocused} = useAppSelector(getFocusCard)
+    const dispatch = useAppDispatch()
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const ref = useRef<HTMLDivElement | any >(null)
+    const [ location, setLocation ] = useState<{top?: number, left?: number, right?: number}>({top: rect?.top, left: rect?.left, right: rect?.right})
+  
     useEffect(() => {
-    }, [])
+        if(isFocused) {
+            window.addEventListener('resize', () => setWindowWidth(window.innerWidth));
+    
+            return () => {
+              window.removeEventListener('resize', () => setWindowWidth(window.innerWidth));
+            };
+        }
+    });
+
+    const dispatchHandler = () => {
+        dispatch(disableFocusCard())
+    }
+
+    useEffect(() => {
+        if(isFocused) {
+            dispatchHandler()
+        }
+    }, [windowWidth])
+
+    useEffect(() => {
+        if(data && rect) {
+            if(rect.left > 60 || rect.right > 60) {
+            }
+        }
+    }, [data])
+
+    useEffect(() => {
+        if(data && rect) {
+            const thisRect = ref.current.getBoundingClientRect()
+            setLocation({top: rect.top - ((thisRect.height-rect.height) / 2), left: rect.left - (rect.width / 4)})
+        }
+    }, [data])
+
+
+
     return (
-        data.id ?
-        <div className="position-absolute" style={{top: rect.top, left: rect.left}}>
-            <Image src={data.img[0]} /> {data.special}
+        data && rect ?
+        <div ref={ref} className="position-absolute  rounded rounded-2 bg-primary text-white" style={{top: location.top, left: location.left, width: rect.width*1.5}} onMouseLeave={dispatchHandler}  >
+            <div>
+                <Image alt={data.name} src={data.img[0]} className='w-100' /> 
+
+            </div>
+            <div>
+                <Link to="">
+                    <div className="p-3">
+                        <div className="text-white d-flex justify-content-between mb-2" >
+                            <span className="border border-2 rounded rounded-circle border-white" >
+                                <FaPlay />
+                            </span>
+                            <span className="border border-2 rounded rounded-circle border-white" >
+                                <IoIosArrowDown className='' />
+                            </span>
+                        </div>
+                        <div className="my-3 text-white" >
+                            <div>{data.match}% Match</div>
+                            <div>
+                                <span className="border border-1 border-white" >{data.pegi}</span>
+                                <span>{data.time}</span>
+                            </div>
+                        </div>
+                        <div className="text-white mb-2 d-flex">
+                            {data.category.map((el, i) => (
+                                <div  key={el}>
+                                    {i > 0 &&<span className="pe-1">&#x2022;</span>}
+                                    <span>{el} </span>
+                                </div>
+                                    
+                            ))}
+                        </div>
+                    </div>
+                </Link>
+            </div>
         </div> : <></>
     );
 };

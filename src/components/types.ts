@@ -19,6 +19,9 @@ export interface FocusCardState {
     rect: {
         top: number,
         left: number,
-        width: number
+        right: number,
+        width: number,
+        height: number
     }
+    isFocused: boolean
 }

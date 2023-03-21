@@ -3,11 +3,9 @@ import Slider from "react-slick";
 import SliderCard from './SliderCard';
 import SliderArrow from './SliderArrow';
 import SliderLoader from './SliderLoader';
+import { MovieData } from './types';
 interface Props {
-    data: {
-        img: string[]
-        id: string
-    }[],
+    data: MovieData[],
 }
 const MoviesSlider = ({data}: Props) => {
   const [ isLoading, setIsLoading ] = useState(true)

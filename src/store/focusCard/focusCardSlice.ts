@@ -9,9 +9,12 @@ const FocusCardSlice = createSlice({
     reducers: {
         setFocusCard: (state, action: PayloadAction<FocusCardState>) => {
             return action.payload
+        },
+        disableFocusCard: () => {
+            return {}
         }
     }
 })
 
 export default FocusCardSlice.reducer
-export const { setFocusCard } = FocusCardSlice.actions
+export const { setFocusCard, disableFocusCard } = FocusCardSlice.actions
