@@ -7,13 +7,77 @@ import { Link } from 'react-router-dom';
 import { FaPlay } from 'react-icons/fa';
 import { IoIosArrowDown } from 'react-icons/io';
 
+interface Location {
+    top?: number,
+    left?: number, 
+    right?: number,
+    width?: number,
+    opacity?: number
+}
+
+interface StyleProps {
+    top?: number,
+    left?: number,
+    right?: number,
+    width?: number,
+    opacity?: number,
+    transform?: string
+}
+
 const SliderFocusedCard = () => {
     const {data, rect, isFocused} = useAppSelector(getFocusCard)
     const dispatch = useAppDispatch()
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const ref = useRef<HTMLDivElement | any >(null)
-    const [ location, setLocation ] = useState<{top?: number, left?: number, right?: number}>({top: rect?.top, left: rect?.left, right: rect?.right})
-  
+
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [ location, setLocation ] = useState<Location | undefined>()
+    const [ styleProps, setStyleProps ] = useState<StyleProps | undefined>({opacity: 0})
+    const [ style, setStyle ] = useState<{transform: string} | undefined>(undefined)
+
+    function handleLocation () {
+    }
+   
+
+    function handleCard () {
+        if(rect && data && ref.current) {
+            const thisRect = ref.current.getBoundingClientRect()
+            if(rect.left <= 60) {
+                console.log((thisRect.height-rect.height) / 2)
+                setStyleProps({top: rect.top - ((thisRect.height-rect.height) / 2), left: 60, width: rect.width*1.5, opacity: 1, transform: `translateX(-${(thisRect.height - rect.height) / 4}px) translateY(${(thisRect.height - rect.height) / 4}px) scaleX(${rect.width / thisRect.width}) scaleY(${rect.width / thisRect.width})`})
+                setTimeout(() => {
+                    setStyleProps({top: rect.top - ((thisRect.height-rect.height) / 2), left: 60, width: rect.width*1.5, opacity: 1})
+                    
+                }, 104540);
+                // setLocation({top: rect.top - ((thisRect.height-rect.height) / 2), left: 60, width: rect.width*1.5, opacity: 1})
+            }
+
+            if(rect.right < 100) {
+                // setLocation({top: rect.top - ((thisRect.height-rect.height) / 2), right: 60, width: rect.width*1.5})
+            }
+            if(60 < rect.left && rect.right > 100) {
+                setStyleProps({top: rect.top - ((thisRect.height-rect.height) / 2), left: rect.left - (rect.width / 4), width: rect.width*1.5, opacity: 0, transform: `translateY(${(thisRect.height - rect.height) / 4}px) scaleX(${rect.width / thisRect.width}) scaleY(${rect.width / thisRect.width})`})
+                setTimeout(() => {
+                    console.log("work")
+                    setStyleProps({top: rect.top - ((thisRect.height-rect.height) / 2), left: rect.left - (rect.width / 4), width: rect.width*1.5, opacity: 1})
+                }, 300)
+            }
+
+        }
+    }
+
+    useEffect(() => {
+        handleCard()
+    }, [data])
+
+    const handleFocusDisable = () => {
+        setTimeout(() => {
+            dispatch(disableFocusCard())
+            setStyleProps({opacity: 0})
+            setLocation(undefined)
+        }, 500)
+    }
+
+    //disable focus on widnow width
     useEffect(() => {
         if(isFocused) {
             window.addEventListener('resize', () => setWindowWidth(window.innerWidth));
@@ -24,35 +88,16 @@ const SliderFocusedCard = () => {
         }
     });
 
-    const dispatchHandler = () => {
-        dispatch(disableFocusCard())
-    }
-
     useEffect(() => {
         if(isFocused) {
-            dispatchHandler()
+            handleFocusDisable()
         }
     }, [windowWidth])
-
-    useEffect(() => {
-        if(data && rect) {
-            if(rect.left > 60 || rect.right > 60) {
-            }
-        }
-    }, [data])
-
-    useEffect(() => {
-        if(data && rect) {
-            const thisRect = ref.current.getBoundingClientRect()
-            setLocation({top: rect.top - ((thisRect.height-rect.height) / 2), left: rect.left - (rect.width / 4)})
-        }
-    }, [data])
-
 
 
     return (
         data && rect ?
-        <div ref={ref} className="position-absolute  rounded rounded-2 bg-primary text-white" style={{top: location.top, left: location.left, width: rect.width*1.5}} onMouseLeave={dispatchHandler}  >
+        <div ref={ref} className="slider-focused-card-cont position-absolute rounded rounded-2 bg-primary text-white overflow-hidden" style={{width: rect.width*1.5, ...location, ...styleProps}} onMouseLeave={handleFocusDisable}  >
             <div>
                 <Image alt={data.name} src={data.img[0]} className='w-100' /> 
 

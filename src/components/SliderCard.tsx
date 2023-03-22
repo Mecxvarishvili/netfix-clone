@@ -9,23 +9,35 @@ interface Props {
 }
 
 const SliderCard = ({data}: Props) => {
-    const contRef = useRef<HTMLDivElement | any >(null)
+    const [ isSelected, setIsSelected ] = useState<any>(false)
     const dispatch = useAppDispatch()
-    const [ isSelected, setIsSelected ] = useState(false)
+    const contRef = useRef<HTMLDivElement>(null!)
 
     const dispatchHandler = async() => {
-        setIsSelected(true)
         const { top, left, right, width, height} = contRef.current.getBoundingClientRect();
         const scroll = window.pageYOffset
         if(window.innerWidth >= 1200) {
             if(true) {
-                dispatch(setFocusCard({data, rect: {top: top + scroll, left, right, width, height}, isFocused: true}))
+                dispatch(setFocusCard({data, rect: {top: top + scroll, left, right: window.innerWidth - right , width, height}, isFocused: true}))
             }
         }
     }
     
+
+    function handleMouseEnter () {
+        setIsSelected(setTimeout(() => {
+            dispatchHandler()
+        }, 1000))
+    }
+
+    function handleMouseLeave () {
+        if(isSelected) {
+            clearTimeout(isSelected)
+        }
+    }
+    
     return (
-        <div ref={contRef} className="slider-card" onMouseEnter={dispatchHandler} onMouseLeave={() => setIsSelected(false)} >
+        <div ref={contRef} className="slider-card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <Image src={data.img[0]} />
         </div>
     );
