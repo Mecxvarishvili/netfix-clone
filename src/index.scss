@@ -3,6 +3,7 @@ $primary: #141414;
 $secondary: #8c8c8c;
 $dark: #333;
 $text-muted: #737373;
+$segswgr: #e6e6e6;
 $danger: #e50914;
 $warning: #e87c03;
 $info: #0071eb;
@@ -33,7 +34,7 @@ $my-default-font-size: 1rem;
 $font-points: (0.9, 1, 1.25, 1.5, 1.625, 2, 3, 4, 5,);
 
 $custom-font-size: (
-  09: $my-default-font-size * 0.9,
+  s8: $my-default-font-size * 0.8,
   1: $my-default-font-size,
   1125: $my-default-font-size * 1.125,
   12: $my-default-font-size * 1.2,
@@ -58,3 +59,7 @@ $custom-font-size: (
   }
 }
 
+
+.font-13 {
+  font-size: 13px;
+}

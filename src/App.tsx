@@ -4,12 +4,14 @@ import page from './pages/page';
 import BrowsePage from './pages/browse/BrowsePage';
 import LogInPage from './pages/LogInPage';
 import SignUpPage from './pages/SignUpPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 
 function App() {
   return (
     <Router>
       <Routes>
+        <Route path="*" element={<NotFoundPage/>}/>
         <Route path={page.HOME} element={<HomePage/>}/>
         <Route path={page.BROWSE} element={<BrowsePage/>}/>
         <Route path={page.LOGIN} element={<LogInPage/>}/>

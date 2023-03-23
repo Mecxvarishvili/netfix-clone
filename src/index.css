@@ -11622,10 +11622,6 @@ input {
   outline: none;
 }
 
-.font-13 {
-  font-size: 13px;
-}
-
 body {
   background-color: #141414;
 }
@@ -11696,6 +11692,24 @@ body {
 .bw-page .banner-container .maturity-cont {
   padding-right: 60px;
   background-color: rgba(51, 51, 51, 0.6);
+}
+
+.not-found-page .logo {
+  width: 93px;
+  height: 25px;
+}
+.not-found-page .content-shadow {
+  z-index: 22;
+}
+.not-found-page .content-shadow:before {
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0.2) 45%, rgba(0, 0, 0, 0.1) 55%, transparent 70%);
+  bottom: -10vw;
+  content: "";
+  left: 10vw;
+  position: absolute;
+  right: 10vw;
+  top: -10vw;
+  z-index: -1;
 }
 
 @media (min-width: 501px) {
@@ -11859,8 +11873,8 @@ body {
     width: 260px;
   }
 }
-.fs-xs-9 {
-  font-size: 0.9rem;
+.fs-xs-s8 {
+  font-size: 0.8rem;
 }
 
 .fs-xs-1 {
@@ -11904,8 +11918,8 @@ body {
 }
 
 @media (min-width: 501px) {
-  .fs-sm-9 {
-    font-size: 0.9rem;
+  .fs-sm-s8 {
+    font-size: 0.8rem;
   }
   .fs-sm-1 {
     font-size: 1rem;
@@ -11939,8 +11953,8 @@ body {
   }
 }
 @media (min-width: 801px) {
-  .fs-md-9 {
-    font-size: 0.9rem;
+  .fs-md-s8 {
+    font-size: 0.8rem;
   }
   .fs-md-1 {
     font-size: 1rem;
@@ -11974,8 +11988,8 @@ body {
   }
 }
 @media (min-width: 1101px) {
-  .fs-lg-9 {
-    font-size: 0.9rem;
+  .fs-lg-s8 {
+    font-size: 0.8rem;
   }
   .fs-lg-1 {
     font-size: 1rem;
@@ -12009,8 +12023,8 @@ body {
   }
 }
 @media (min-width: 1200px) {
-  .fs-xl-9 {
-    font-size: 0.9rem;
+  .fs-xl-s8 {
+    font-size: 0.8rem;
   }
   .fs-xl-1 {
     font-size: 1rem;
@@ -12044,8 +12058,8 @@ body {
   }
 }
 @media (min-width: 1400px) {
-  .fs-xxl-9 {
-    font-size: 0.9rem;
+  .fs-xxl-s8 {
+    font-size: 0.8rem;
   }
   .fs-xxl-1 {
     font-size: 1rem;
@@ -12077,6 +12091,9 @@ body {
   .fs-xxl-4 {
     font-size: 4rem;
   }
+}
+.font-13 {
+  font-size: 13px;
 }
 
 /*# sourceMappingURL=index.css.map */

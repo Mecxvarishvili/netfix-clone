@@ -11,10 +11,6 @@ input {
     outline: none;
 }
 
-.font-13 {
-    font-size: 13px;
-}
-
 body {
     background-color: #141414;
 }
@@ -95,6 +91,29 @@ body {
         .maturity-cont {
             padding-right: 60px;
             background-color: rgba(51,51,51,.6);
+        }
+    }
+}
+
+//not found page
+
+.not-found-page {
+    .logo {
+        width: 93px;
+        height: 25px;
+    }
+
+    .content-shadow {
+        z-index: 22;
+        &:before {
+            background: radial-gradient(ellipse at center,rgba(0,0,0,.5) 0,rgba(0,0,0,.2) 45%,rgba(0,0,0,.1) 55%,transparent 70%);
+            bottom: -10vw;
+            content: "";
+            left: 10vw;
+            position: absolute;
+            right: 10vw;
+            top: -10vw;
+            z-index: -1;
         }
     }
 }
