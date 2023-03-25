@@ -35,8 +35,6 @@
 .slider-focused-card-cont {
     transition: all .1s ease-in-out; 
     box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 10px;
-    &:hover {
-    }
 }
 
 @keyframes slider-loader-animation {

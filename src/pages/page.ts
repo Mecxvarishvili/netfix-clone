@@ -3,7 +3,7 @@ enum page {
     BROWSE = "/browse",
     LOGIN = "login",
     SIGNUP = '/signup',
-    GENRE = '/genre/:id'
+    GENRE = '/browse/genre/:genre'
 }
 
 export default page

@@ -18,8 +18,8 @@ const BrowseHeader = () => {
                         <Image className="netflix-logo" src={require("../../images/netflixlogo.png")} />
                     </Link>
                     <span className="d-none d-md-flex g-3" >
-                        <Link className="text-white text-decoration-none d-inline-flex align-items-center" to={page.GENRE} >TV shows</Link>
-                        <Link className="text-white text-decoration-none d-inline-flex align-items-center" to={page.GENRE} > Movies</Link>
+                        <Link className="text-white text-decoration-none d-inline-flex align-items-center" to={page.GENRE.replace(":genre", "tv shows")} >TV shows</Link>
+                        <Link className="text-white text-decoration-none d-inline-flex align-items-center" to={page.GENRE.replace(":genre", "movies")} > Movies</Link>
                     </span>
                 </div>
                 <div className="d-flex" >

@@ -5,13 +5,23 @@ import MoviesSlider from '../../components/MoviesSlider';
 import BrowseFooter from './BrowseFooter';
 import BrowseBanner from './BrowseBanner';
 import SliderFocusedCard from '../../components/SliderFocusedCard';
+import { useParams } from 'react-router-dom';
+import API from '../../serialize/api';
 
 const BrowsePage = () => {
     const [ data, setData ] = useState([])
     const [ isLoading, setIsLoading ] = useState(true)
+    const { genre } = useParams()
+
     const fetchData  = async () => {
-        const data = await fetch("http://localhost:8000/nf/")
-        return data.json()
+        let data
+        if(genre) {
+             data = await API.fetchMovieGenre(genre)
+
+        } else {
+             data = await API.fetchMovies()
+        }
+        return data
     }
 
     useEffect(() => {
@@ -20,7 +30,8 @@ const BrowsePage = () => {
                 setData(data)
                 setIsLoading(false)
             })
-    }, [])
+    }, [genre])
+    
     const items: string[] = ["Audio Description", "Help Center", "Gift Cards", "Media Center", "Investor Relations", "Jobs", "Terms of Use", "Privacy", "Legal Notices", "Cookie Preferences", "Corporate Information", "Contact Us"]
     return (
         <Loader isLoading={isLoading} >

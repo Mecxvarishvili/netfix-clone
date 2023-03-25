@@ -11775,6 +11775,7 @@ body {
   transition: all 0.1s ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 10px;
 }
+
 @keyframes slider-loader-animation {
   0% {
     background-color: #1a1a1a;

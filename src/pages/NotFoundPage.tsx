@@ -13,7 +13,7 @@ const NotFoundPage = () => {
             </header>
             <div className='position-absolute top-0 left-0 w-100 h-100' style={{zIndex: -1}}>
                 <Image className="w-100 h-100 object-fit-cover" alt="lost in space" src="https://assets.nflxext.com/ffe/siteui/pages/errors/bg-lost-in-space.png" />
-                <div className="position-absolute end-0 bottom-0 px-3 py-2 px-sm-5 py-sm-3 py-lg-4 fw-lighter font-13">FROM <strong className="text-secondary" >LOST IN SPACE</strong></div>
+                <div className="position-absolute end-0 bottom-0 px-3 py-2 px-sm-5 py-sm-3 py-lg-4 fw-lighter font-13">FROM <strong style={{color: "hsla(0,0%,90%,.77)"}} >LOST IN SPACE</strong></div>
             </div>
             <div className="h-25"></div>
             <div className="content-shadow position-relative  text-center h-50 d-flex flex-column" >
