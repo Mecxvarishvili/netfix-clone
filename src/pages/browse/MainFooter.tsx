@@ -7,7 +7,9 @@ import { Link } from 'react-router-dom';
 interface Props {
     items: string[]
 }
-const BrowseFooter = ({items}: Props) => {
+const MainFooter = () => {
+    const items: string[] = ["Audio Description", "Help Center", "Gift Cards", "Media Center", "Investor Relations", "Jobs", "Terms of Use", "Privacy", "Legal Notices", "Cookie Preferences", "Corporate Information", "Contact Us"]
+
     return (
         <footer className="footer px-s mt-5" >
             <div className="footer-cont mx-auto">
@@ -31,4 +33,4 @@ const BrowseFooter = ({items}: Props) => {
     );
 };
 
-export default BrowseFooter;
+export default MainFooter;

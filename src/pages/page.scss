@@ -118,6 +118,11 @@ body {
     }
 }
 
+//search page 
+.search-page {
+    margin-top: 70px;
+}
+
 @media (min-width: map_get($grid-breakpoints, sm)) {
     .menu-logo {
         width: 108px;
@@ -136,6 +141,9 @@ body {
             min-height: 630px;
             margin-bottom: 90px;
         }
+    }
+    .search-page {
+        margin-top: 110px;
     }
 }
 @media (min-width: map_get($grid-breakpoints, lg)) {

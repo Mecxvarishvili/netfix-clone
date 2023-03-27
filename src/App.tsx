@@ -6,6 +6,8 @@ import LogInPage from './pages/LogInPage';
 import SignUpPage from './pages/SignUpPage';
 import NotFoundPage from './pages/NotFoundPage';
 import MainHeader from './layout/header/MainHeader';
+import SearchPage from './pages/SearchPage';
+import MainFooter from './pages/browse/MainFooter';
 
 
 function App() {
@@ -17,9 +19,11 @@ function App() {
         <Route path={page.HOME} element={<HomePage/>}/>
         <Route path={page.BROWSE} element={<BrowsePage/>}/>
         <Route path={page.GENRE} element={<BrowsePage/>}/>
+        <Route path={page.SEARCH} element={<SearchPage/>}/>
         <Route path={page.LOGIN} element={<LogInPage/>}/>
         <Route path={page.SIGNUP} element={<SignUpPage/>}/>
       </Routes>
+      <MainFooter />
     </Router>
   );
 }

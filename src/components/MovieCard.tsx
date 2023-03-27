@@ -8,7 +8,7 @@ interface Props {
     data: MovieData
 }
 
-const SliderCard = ({data}: Props) => {
+const MovieCard = ({data}: Props) => {
     const [ isSelected, setIsSelected ] = useState<any>(false)
     const dispatch = useAppDispatch()
     const contRef = useRef<HTMLDivElement>(null!)
@@ -37,10 +37,10 @@ const SliderCard = ({data}: Props) => {
     }
     
     return (
-        <div ref={contRef} className="slider-card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <Image src={data.img[0]} />
+        <div ref={contRef} className="movie-card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <Image className="w-100 h-100" src={data.img[0]} />
         </div>
     );
 };
 
-export default SliderCard;
+export default MovieCard;

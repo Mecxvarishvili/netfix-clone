@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import HomeHeader from '../../layout/header/MainHeader';
 import Loader from '../../components/Loader';
 import MoviesSlider from '../../components/MoviesSlider';
-import BrowseFooter from './BrowseFooter';
 import BrowseBanner from './BrowseBanner';
 import SliderFocusedCard from '../../components/SliderFocusedCard';
 import { useParams } from 'react-router-dom';
@@ -32,18 +31,16 @@ const BrowsePage = () => {
             })
     }, [genre])
     
-    const items: string[] = ["Audio Description", "Help Center", "Gift Cards", "Media Center", "Investor Relations", "Jobs", "Terms of Use", "Privacy", "Legal Notices", "Cookie Preferences", "Corporate Information", "Contact Us"]
     return (
-        <Loader isLoading={isLoading} >
-            <div className='bw-page' >
+        <div className='bw-page min-vh-100' >
+            <Loader isLoading={isLoading} >
                 <BrowseBanner data={data[Math.floor(Math.random() * data.length)]} />
                 <MoviesSlider data={data}/>
                 <MoviesSlider data={data}/>
                 <MoviesSlider data={data}/>
                 <SliderFocusedCard />
-                <BrowseFooter items={items} />
-            </div>
-        </Loader>
+            </Loader>
+        </div>
     );
 };
 

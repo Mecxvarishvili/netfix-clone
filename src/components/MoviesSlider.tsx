@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Slider from "react-slick";
-import SliderCard from './SliderCard';
+import MovieCard from './MovieCard';
 import SliderArrow from './SliderArrow';
 import SliderLoader from './SliderLoader';
 import { MovieData } from './types';
@@ -77,7 +77,7 @@ const MoviesSlider = ({data}: Props) => {
             <div className="fs-xs-12 fs-xl text-white fw-bold mb-2" > Popular on Netflix</div>
             <Slider {...settings}>
                 {data.map((data => (
-                    <SliderCard key={data.id} data={data}/>
+                    <MovieCard key={data.id} data={data}/>
                 )))}
             </Slider>
         </div>
