@@ -11850,13 +11850,13 @@ body {
   width: 84px;
   height: 24px;
 }
-.header .search-input {
+.header .input-cont {
   width: 115px;
   height: 28px;
 }
 
 @media (min-width: 501px) {
-  .header .search-input {
+  .header .input-cont {
     width: 178px;
   }
 }
@@ -11865,17 +11865,22 @@ body {
     width: 120px;
     height: 34px;
   }
-  .header .search-input {
+  .header .input-cont {
     width: 160px;
   }
 }
 @media (min-width: 1200px) {
-  .header .search-input {
+  .header .input-cont {
     width: 260px;
+    height: 36px;
   }
 }
 .fs-xs-s8 {
   font-size: 0.8rem;
+}
+
+.fs-xs-s9 {
+  font-size: 0.9rem;
 }
 
 .fs-xs-1 {
@@ -11922,6 +11927,9 @@ body {
   .fs-sm-s8 {
     font-size: 0.8rem;
   }
+  .fs-sm-s9 {
+    font-size: 0.9rem;
+  }
   .fs-sm-1 {
     font-size: 1rem;
   }
@@ -11956,6 +11964,9 @@ body {
 @media (min-width: 801px) {
   .fs-md-s8 {
     font-size: 0.8rem;
+  }
+  .fs-md-s9 {
+    font-size: 0.9rem;
   }
   .fs-md-1 {
     font-size: 1rem;
@@ -11992,6 +12003,9 @@ body {
   .fs-lg-s8 {
     font-size: 0.8rem;
   }
+  .fs-lg-s9 {
+    font-size: 0.9rem;
+  }
   .fs-lg-1 {
     font-size: 1rem;
   }
@@ -12027,6 +12041,9 @@ body {
   .fs-xl-s8 {
     font-size: 0.8rem;
   }
+  .fs-xl-s9 {
+    font-size: 0.9rem;
+  }
   .fs-xl-1 {
     font-size: 1rem;
   }
@@ -12061,6 +12078,9 @@ body {
 @media (min-width: 1400px) {
   .fs-xxl-s8 {
     font-size: 0.8rem;
+  }
+  .fs-xxl-s9 {
+    font-size: 0.9rem;
   }
   .fs-xxl-1 {
     font-size: 1rem;

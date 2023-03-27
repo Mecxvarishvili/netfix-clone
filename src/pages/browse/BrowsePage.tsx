@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import HomeHeader from '../../layout/header/BrowseHeader';
+import HomeHeader from '../../layout/header/MainHeader';
 import Loader from '../../components/Loader';
 import MoviesSlider from '../../components/MoviesSlider';
 import BrowseFooter from './BrowseFooter';
@@ -35,7 +35,6 @@ const BrowsePage = () => {
     const items: string[] = ["Audio Description", "Help Center", "Gift Cards", "Media Center", "Investor Relations", "Jobs", "Terms of Use", "Privacy", "Legal Notices", "Cookie Preferences", "Corporate Information", "Contact Us"]
     return (
         <Loader isLoading={isLoading} >
-            <HomeHeader />
             <div className='bw-page' >
                 <BrowseBanner data={data[Math.floor(Math.random() * data.length)]} />
                 <MoviesSlider data={data}/>

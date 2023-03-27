@@ -32,3 +32,7 @@ export const useRefDimensions = (ref: MutableRefObject<any>) => {
     }, [ref])
     return dimensions
 }
+
+export function serializeFormQuery() {
+    return 1
+}

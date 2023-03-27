@@ -4,8 +4,9 @@ import Form from 'react-bootstrap/esm/Form';
 import page from '../../pages/page';
 import Image from "react-bootstrap/Image"
 import NavBar from './NavBar';
+import SearchBar from './SearchBar';
 
-const BrowseHeader = () => {
+const MainHeader = () => {
     const [ navBar, setNavBar ] = useState<boolean>(false)
 
     return (
@@ -23,10 +24,7 @@ const BrowseHeader = () => {
                     </span>
                 </div>
                 <div className="d-flex" >
-                    <Form className="d-inline-flex align-items-center" >
-                        <Form.Control className="search-input bg-black rounded-0 px-2 py-1 text-white"  placeholder="Titles, people, genre"/>
-
-                    </Form>
+                    <SearchBar />
                     <div className='d-none d-md-flex text-white' >
                         <Image src="https://occ-0-5515-2774.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABceskA5x4J8tPPGrpbl0pasEOd1RwF7PDjvIOR8P4dwIayVvD10tmC-G5nXC23smU6-H4onhbt8prP1twBC6dQuN-p4DcNg.png?r=02d" />
                         <span>name</span>
@@ -37,4 +35,4 @@ const BrowseHeader = () => {
     );
 };
 
-export default BrowseHeader;
+export default MainHeader;

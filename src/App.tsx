@@ -5,11 +5,13 @@ import BrowsePage from './pages/browse/BrowsePage';
 import LogInPage from './pages/LogInPage';
 import SignUpPage from './pages/SignUpPage';
 import NotFoundPage from './pages/NotFoundPage';
+import MainHeader from './layout/header/MainHeader';
 
 
 function App() {
   return (
     <Router>
+      <MainHeader />
       <Routes>
         <Route path="*" element={<NotFoundPage/>}/>
         <Route path={page.HOME} element={<HomePage/>}/>
