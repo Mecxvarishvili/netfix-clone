@@ -7,6 +7,7 @@ import page from '../../pages/page';
 
 const SearchBar = () => {
     const [ isOpen, setIsOpen ] = useState<boolean>(false)
+    const [windowWith, setWindowWidth ] = useState<number>(0)
     const inputRef = useRef<HTMLInputElement>(null!)
     const [ searchParams, setSearchParams ] = useSearchParams()
     const location  = useLocation()
@@ -52,10 +53,24 @@ const SearchBar = () => {
             setIsOpen(false)
         }
     }
+
+
+    useEffect(() => {
+            window.addEventListener('resize', () => setWindowWidth(window.innerWidth));
+    
+            return () => {
+              window.removeEventListener('resize', () => setWindowWidth(window.innerWidth));
+            };
+
+    });
     
     return (
         <div>
-            { isOpen ?
+            { windowWith < 1200 ?
+            <div className="input-cont d-flex align-items-center bg-black text-white border border-1  border-white fs-xs-2 container gx-1">
+                <Form.Control placeholder="Search" className="border-0 rounded-0 bg-black text-white py-0 px-2 fs-xs-s9"  ref={inputRef} /* onBlur={handleBlur} */ onChange={handleChange} defaultValue={searchParams.get("q") as string} />
+            </div>  :
+            isOpen ?
             <div className="input-cont d-flex align-items-center bg-black text-white border border-1  border-white fs-xs-2 container gx-1">
                 <IoIosSearch/>
                 <Form.Control placeholder="Title, People, Genres" className="border-0 rounded-0 bg-black text-white py-0 px-2 fs-xs-s9"  ref={inputRef} onBlur={handleBlur} onChange={handleChange} defaultValue={searchParams.get("q") as string} />

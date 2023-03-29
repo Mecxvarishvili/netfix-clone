@@ -3,9 +3,11 @@ import HomeHeader from '../../layout/header/MainHeader';
 import Loader from '../../components/Loader';
 import MoviesSlider from '../../components/MoviesSlider';
 import BrowseBanner from './BrowseBanner';
-import SliderFocusedCard from '../../components/SliderFocusedCard';
-import { useParams } from 'react-router-dom';
+import MovieCardFocus from '../../components/MovieCardFocus';
+import { Route, Routes, useParams } from 'react-router-dom';
 import API from '../../serialize/api';
+import page from '../page';
+import MoviePreview from '../../layout/preview/MoviePreview';
 
 const BrowsePage = () => {
     const [ data, setData ] = useState([])
@@ -38,7 +40,8 @@ const BrowsePage = () => {
                 <MoviesSlider data={data}/>
                 <MoviesSlider data={data}/>
                 <MoviesSlider data={data}/>
-                <SliderFocusedCard />
+                <MovieCardFocus />
+                <MoviePreview />
             </Loader>
         </div>
     );

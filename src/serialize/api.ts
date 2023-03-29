@@ -8,6 +8,9 @@ const API = {
         return API.baseAPI("")
         
     },
+    fetchSingleMovie: async (id: string | null) => {
+        return API.baseAPI(`movie/${id}`)
+    },
     fetchMovieGenre: async (genre: string) => {
         return await API.baseAPI(`genre/${genre}`)
     },

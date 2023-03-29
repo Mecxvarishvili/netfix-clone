@@ -24,7 +24,7 @@ interface StyleProps {
     transform?: string
 }
 
-const SliderFocusedCard = () => {
+const MovieCardFocus = () => {
     const {data, rect, isFocused} = useAppSelector(getFocusCard)
     const dispatch = useAppDispatch()
     const ref = useRef<HTMLDivElement | any >(null)
@@ -136,4 +136,4 @@ const SliderFocusedCard = () => {
     );
 };
 
-export default SliderFocusedCard;
+export default MovieCardFocus;
