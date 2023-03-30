@@ -11878,6 +11878,10 @@ body {
     height: 36px;
   }
 }
+.movie-preview-cont {
+  z-index: 999;
+}
+
 .fs-xs-s8 {
   font-size: 0.8rem;
 }

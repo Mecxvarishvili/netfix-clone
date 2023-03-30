@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import API from '../../serialize/api';
-import { Image } from 'react-bootstrap';
 import { MovieData } from '../../components/types';
+import PreviewBanner from './PreviewBanner';
+import PreviewFooter from './PreviewFooter';
 
 const MoviePreview = () => {
     const [searchParams] = useSearchParams()
@@ -18,9 +19,9 @@ const MoviePreview = () => {
 
     return (
         searchParams.get("jbv") && data ?
-        <div className="movie-preview-cont w-100 min-vh-100 position-absolute top-0 start-0">
+        <div className="movie-preview-cont w-100 min-vh-100 position-absolute top-0 start-0 d-flex justify-content-center">
             <div className='bg-primary text-white' style={{width: "1000px"}} >
-                <Image className="w-100 h-100" alt={data.name} src={data.img[0]}/>
+                <PreviewBanner data={data} />
                 <div className="" >
                     <div>
                         <div>
@@ -58,6 +59,7 @@ const MoviePreview = () => {
                         </div>
                     </div>
                 </div>
+                <PreviewFooter data={data} />
             </div>
         </div> 
         : <></>
