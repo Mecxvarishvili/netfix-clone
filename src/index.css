@@ -11881,6 +11881,13 @@ body {
 .movie-preview-cont {
   z-index: 999;
 }
+.movie-preview-cont .banner-cont {
+  background: linear-gradient(0deg, #181818, transparent 50%);
+}
+.movie-preview-cont a:hover {
+  text-decoration: underline;
+  background-color: 0;
+}
 
 .fs-xs-s8 {
   font-size: 0.8rem;

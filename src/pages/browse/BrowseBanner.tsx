@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
 import { AiOutlineInfoCircle } from 'react-icons/ai';
 import {GrPlayFill } from 'react-icons/gr';
+import PlayButton from '../../components/PlayButton';
 
 interface Props {
     data: {
@@ -25,7 +26,7 @@ const BrowseBanner = ({data}: Props) => {
                     </div>
                     <div>{data.describe}</div>
                     <div className='d-flex' >
-                        <Button className="px-4 me-3 fs-lg-125 fs-xxl-15 bg-white text-black fw-medium d-flex align-items-center border-0" > <GrPlayFill /> &nbsp;<span>Play</span></Button>
+                        <PlayButton />
                         <Button className="px-4 fs-lg-125 fs-xxl-15 fw-medium bg-tertiary d-flex align-items-center border-0" ><AiOutlineInfoCircle /> &nbsp;<span> More Info</span></Button>
                     </div>
                 </div>
