@@ -21,7 +21,7 @@ const ListSerialize = ({type, arr, link, short, className}: Props) => {
             <span className="text-secondary">{type} </span>
             {array.map((el,i) => (
                 <span key={el} >
-                    <Link className="text-white text-decoration-none" to={link} >{el}</Link>
+                    <Link className="text-white" to={link} > {el}{i+(short ? 0 : 1) !== array.length &&  <>, </> }</Link>
                 </span>
             ))}
             {short && <span> more</span>}

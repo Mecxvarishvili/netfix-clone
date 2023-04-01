@@ -37,6 +37,15 @@
     box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 10px;
 }
 
+//match score
+.match-score {
+    color: #46d369
+}
+
+.maturity-rating {
+    border: 1px solid hsla(0,0%,100%,.4);
+}
+
 @keyframes slider-loader-animation {
     0% {
         background-color: #1a1a1a;

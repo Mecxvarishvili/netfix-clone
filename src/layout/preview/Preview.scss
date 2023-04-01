@@ -4,6 +4,9 @@
     .banner-cont {
         background: linear-gradient(0deg,#181818,transparent 50%);
     }
+    a {
+        text-decoration: none;
+    }
     a:hover {
         text-decoration: underline;
         background-color: red($color: #000000);

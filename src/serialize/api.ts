@@ -16,6 +16,9 @@ const API = {
     },
     fetchMovieSearch: async (search: string) => {
         return await API.baseAPI(`search/${search}`)
+    },
+    fetchSimilarCategory: async () => {
+        return await API.baseAPI("similar")
     }
 }
 

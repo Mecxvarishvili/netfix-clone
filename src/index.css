@@ -11783,6 +11783,14 @@ body {
   box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 10px;
 }
 
+.match-score {
+  color: #46d369;
+}
+
+.maturity-rating {
+  border: 1px solid hsla(0, 0%, 100%, 0.4);
+}
+
 @keyframes slider-loader-animation {
   0% {
     background-color: #1a1a1a;
@@ -11883,6 +11891,9 @@ body {
 }
 .movie-preview-cont .banner-cont {
   background: linear-gradient(0deg, #181818, transparent 50%);
+}
+.movie-preview-cont a {
+  text-decoration: none;
 }
 .movie-preview-cont a:hover {
   text-decoration: underline;

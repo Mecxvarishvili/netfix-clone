@@ -1,10 +1,15 @@
+export type MatchType = string | boolean;
+
+export type MaturityType = string;
+
+
 export interface MovieData {
     id: string,
     name: string,
     describe: string,
     release: string,
-    pegi: string,
-    match: string | boolean,
+    pegi: MaturityType,
+    match: MatchType,
     time: string,
     special: ("trending now" | "only on netflix" | "award-winning shows" | "top searches" | "animation" | "award-winning movies" | "released in the past")[],
     creator: string[],
@@ -25,3 +30,8 @@ export interface FocusCardState {
     }
     isFocused: boolean
 }
+
+export namespace Type {
+}
+
+export default Type
