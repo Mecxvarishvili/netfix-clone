@@ -25,10 +25,10 @@ const MoviePreview = () => {
     }, [location.search])
 
     useEffect(() => {
-        if(jbv) {
+        /* if(jbv) {
             navigate(page.TITLE.replace(":id", jbv))
             console.log(jbv)
-        }
+        } */
     }, [])
 
     return (

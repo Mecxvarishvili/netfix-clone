@@ -8,7 +8,7 @@ import NotFoundPage from './pages/NotFoundPage';
 import MainHeader from './layout/header/MainHeader';
 import SearchPage from './pages/search/SearchPage';
 import MainFooter from './pages/browse/MainFooter';
-import PersonMoviesModal from './pages/modal/PersonMoviesModal';
+import ModalPage from './pages/modal/ModalPage';
 
 
 function App() {
@@ -23,7 +23,8 @@ function App() {
         <Route path={page.SEARCH} element={<SearchPage/>}/>
         <Route path={page.LOGIN} element={<LogInPage/>}/>
         <Route path={page.SIGNUP} element={<SignUpPage/>}/>
-        <Route path={page.PERSON_MODAL} element={<PersonMoviesModal/>}/>
+        <Route path={page.MODAL} element={<ModalPage/>}/>
+        {/* <Route path={page.GENRE_MODAL} element={<GenreModal/>} /> */}
       </Routes>
       <MainFooter />
     </Router>

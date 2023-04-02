@@ -22,9 +22,9 @@ const PreviewMain = ({data}: {data: MovieData}) => {
                 <div>{data.describe}</div>
             </div>
             <div>
-                <ListSerialize className="my-3"  type="Cast:" arr={data.cast} link={page.PERSON_MODAL} short={true} />
-                <ListSerialize className="my-3"  type="Genre:" arr={data.genre} link="?browse/ss" />
-                <ListSerialize className="my-3"  type="This show is:" arr={data.category} link="?browse/ss"  />
+                <ListSerialize className="my-3"  type="Cast:" arr={data.cast} link={page.MODAL.replace(":type", "person")} short={true} />
+                <ListSerialize className="my-3"  type="Genre:" arr={data.genre} link={page.MODAL.replace(":type", "genre")} />
+                <ListSerialize className="my-3"  type="This show is:" arr={data.category} link={page.MODAL.replace(":type", "genre")} />
             </div>
         </div>
     );
