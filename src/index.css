@@ -11886,18 +11886,31 @@ body {
     height: 36px;
   }
 }
-.movie-preview-cont {
+.movie-preview {
   z-index: 999;
 }
-.movie-preview-cont .banner-cont {
+.movie-preview .movie-preview-cont {
+  background-color: #181818;
+}
+.movie-preview .movie-preview-cont .banner-cont {
   background: linear-gradient(0deg, #181818, transparent 50%);
 }
-.movie-preview-cont a {
+.movie-preview .movie-preview-cont a {
   text-decoration: none;
 }
-.movie-preview-cont a:hover {
+.movie-preview .movie-preview-cont a:hover {
   text-decoration: underline;
   background-color: 0;
+}
+
+.person-layout {
+  z-index: 999;
+}
+.person-layout .person-layout-cont {
+  transform-origin: 50% 12.5%;
+  background-color: #181818;
+  width: 80vw;
+  min-width: 80vw;
 }
 
 .fs-xs-s8 {

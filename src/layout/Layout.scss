@@ -1,0 +1,101 @@
+
+//header
+.header {
+    background: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
+    z-index: 999;
+
+    .nav-bar {
+        width: 250px;
+        top: 48px;
+        z-index: 998;
+    }
+    .nav-bar-background {
+        background: rgba(0,0,0,.4);
+        z-index: 1;
+    }
+    
+    .navigation-menu {
+        width: 24px;
+        height: 24px;
+        margin-right: 20px;
+    }
+    .browse-link {
+        width: 84px;
+        height: 24px;
+        display: contents;
+    }
+    .netflix-logo {
+        width: 84px;
+        height: 24px;
+    }
+
+    .input-cont {
+        width: 115px;
+        height: 28px;
+    }
+}
+
+
+
+@include media-breakpoint-up(sm) {
+    .header {
+        .input-cont {
+            width: 178px;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .header {
+        .netflix-logo {
+            width: 120px;
+            height: 34px;
+        }
+        .input-cont {
+            width: 160px;
+        }
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .header {
+        .netflix-logo {
+        }
+        .input-cont {
+            width: 260px;
+            height: 36px;
+        }
+    }
+}
+
+
+//preview
+.movie-preview {
+    z-index: 999;
+    .movie-preview-cont {
+        background-color: #181818;
+        .banner-cont {
+            background: linear-gradient(0deg,#181818,transparent 50%);
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            background-color: red($color: #000000);
+        }
+    }
+}
+
+
+//Person layout
+.person-layout {
+    z-index: 999;
+    .person-layout-cont {
+        transform-origin: 50% 12.5%;
+        background-color: #181818;
+        width: 80vw;
+        min-width: 80vw;
+    }
+}
+

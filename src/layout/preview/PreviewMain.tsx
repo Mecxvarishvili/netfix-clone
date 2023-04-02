@@ -3,6 +3,7 @@ import { MovieData } from '../../components/types';
 import ListSerialize from './ListSerialize';
 import MatchScore from '../../components/MatchScore';
 import MaturityRating from '../../components/MaturityRating';
+import page from '../../pages/page';
 
 const PreviewMain = ({data}: {data: MovieData}) => {
     return (
@@ -21,7 +22,7 @@ const PreviewMain = ({data}: {data: MovieData}) => {
                 <div>{data.describe}</div>
             </div>
             <div>
-                <ListSerialize className="my-3"  type="Cast:" arr={data.cast} link="?browse/ss" short={true} />
+                <ListSerialize className="my-3"  type="Cast:" arr={data.cast} link={page.PERSON} short={true} />
                 <ListSerialize className="my-3"  type="Genre:" arr={data.genre} link="?browse/ss" />
                 <ListSerialize className="my-3"  type="This show is:" arr={data.category} link="?browse/ss"  />
             </div>

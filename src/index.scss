@@ -26,8 +26,7 @@ $grid-breakpoints: (
 @import "../node_modules//bootstrap/scss/bootstrap.scss";
 @import "./pages/page.scss";
 @import "./components/components.scss";
-@import "./layout/header/Header.scss";
-@import "./layout/preview/Preview.scss";
+@import "./layout/Layout.scss";
 @import "~slick-carousel/slick/slick.css"; 
 @import "~slick-carousel/slick/slick-theme.css";
 $my-default-font-size: 1rem;

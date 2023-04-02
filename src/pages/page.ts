@@ -4,7 +4,9 @@ enum page {
     LOGIN = "login",
     SIGNUP = '/signup',
     GENRE = '/browse/genre/:genre',
-    SEARCH = '/search'
+    SEARCH = '/search',
+    TITLE = "/title/:id",
+    PERSON = "/person/:id"
 }
 
 export default page

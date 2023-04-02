@@ -8,6 +8,8 @@ import NotFoundPage from './pages/NotFoundPage';
 import MainHeader from './layout/header/MainHeader';
 import SearchPage from './pages/search/SearchPage';
 import MainFooter from './pages/browse/MainFooter';
+import MoviePreview from './layout/preview/MoviePreview';
+import PersonLayout from './layout/person/PersonLayout';
 
 
 function App() {
@@ -18,11 +20,11 @@ function App() {
         <Route path="*" element={<NotFoundPage/>}/>
         <Route path={page.HOME} element={<HomePage/>}/>
         <Route path={page.BROWSE} element={<BrowsePage/>}/>
-        <Route path={page.BROWSE + "a"} element={<BrowsePage/>}/>
         <Route path={page.GENRE} element={<BrowsePage/>}/>
         <Route path={page.SEARCH} element={<SearchPage/>}/>
         <Route path={page.LOGIN} element={<LogInPage/>}/>
         <Route path={page.SIGNUP} element={<SignUpPage/>}/>
+        <Route path={page.PERSON} element={<PersonLayout/>}/>
       </Routes>
       <MainFooter />
     </Router>

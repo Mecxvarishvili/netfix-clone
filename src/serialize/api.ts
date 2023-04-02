@@ -19,6 +19,9 @@ const API = {
     },
     fetchSimilarCategory: async () => {
         return await API.baseAPI("similar")
+    },
+    fetchPersonMovies: async (person: string) => {
+        return await API.baseAPI(`/person/${person}`)
     }
 }
 
