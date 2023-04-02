@@ -6,7 +6,7 @@ enum page {
     GENRE = '/browse/genre/:genre',
     SEARCH = '/search',
     TITLE = "/title/:id",
-    PERSON = "/person/:id"
+    PERSON_MODAL = "/browse/m/person/:id"
 }
 
 export default page

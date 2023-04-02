@@ -9,8 +9,8 @@ const PreviewFooter = ({data}: {data: MovieData}) => {
     return (
         <div>
             <div className="fs-xs-15 mt-5 mb-4" >About <span className="fw-medium" >{data.name}</span></div>
-            <ListSerialize className='py-1' type="Creators:" arr={data.creator} link={page.PERSON} />
-            <ListSerialize className='py-1' type="Cast:" arr={data.cast} link={page.PERSON} />
+            <ListSerialize className='py-1' type="Creators:" arr={data.creator} link={page.PERSON_MODAL} />
+            <ListSerialize className='py-1' type="Cast:" arr={data.cast} link={page.PERSON_MODAL} />
             <ListSerialize className='py-1' type="Genre:" arr={data.genre} link="?browse/ss" />
             <ListSerialize className='py-1' type="This show is:" arr={data.category} link="?browse/ss"  />
             <div className="d-flex align-items-center" >
