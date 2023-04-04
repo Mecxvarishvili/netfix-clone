@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import page from './pages/page';
-import BrowsePage from './pages/browse/BrowsePage';
 import LogInPage from './pages/LogInPage';
 import SignUpPage from './pages/SignUpPage';
 import NotFoundPage from './pages/NotFoundPage';
-import MainHeader from './layout/header/MainHeader';
 import SearchPage from './pages/search/SearchPage';
 import MainFooter from './pages/browse/MainFooter';
-import ModalPage from './pages/modal/ModalPage';
+import BrowseRoutes from './pages/browse/BrowseRoutes';
+import MainHeader from './layout/header/MainHeader';
+import MoviePreview from "./layout/preview/MoviePreview";
 
 
 function App() {
@@ -18,14 +18,12 @@ function App() {
       <Routes>
         <Route path="*" element={<NotFoundPage/>}/>
         <Route path={page.HOME} element={<HomePage/>}/>
-        <Route path={page.BROWSE} element={<BrowsePage/>}/>
-        <Route path={page.GENRE} element={<BrowsePage/>}/>
+        <Route path={page.BROWSE + "/*"} element={<BrowseRoutes/>}/>
         <Route path={page.SEARCH} element={<SearchPage/>}/>
         <Route path={page.LOGIN} element={<LogInPage/>}/>
         <Route path={page.SIGNUP} element={<SignUpPage/>}/>
-        <Route path={page.MODAL} element={<ModalPage/>}/>
-        {/* <Route path={page.GENRE_MODAL} element={<GenreModal/>} /> */}
       </Routes>
+      <MoviePreview />
       <MainFooter />
     </Router>
   );

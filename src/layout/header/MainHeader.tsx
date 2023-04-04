@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Form from 'react-bootstrap/esm/Form';
 import page from '../../pages/page';
 import Image from "react-bootstrap/Image"
 import NavBar from './NavBar';
@@ -19,8 +18,8 @@ const MainHeader = () => {
                         <Image className="netflix-logo" src={require("../../images/netflixlogo.png")} />
                     </Link>
                     <span className="d-none d-md-flex g-3" >
-                        <Link className="text-white text-decoration-none d-inline-flex align-items-center" to={page.GENRE.replace(":genre", "tv shows")} >TV shows</Link>
-                        <Link className="text-white text-decoration-none d-inline-flex align-items-center" to={page.GENRE.replace(":genre", "movies")} > Movies</Link>
+                        <Link className="text-white text-decoration-none d-inline-flex align-items-center" to={page.BROWSE + page.GENRE.replace(":genre", "tv shows")} >TV shows</Link>
+                        <Link className="text-white text-decoration-none d-inline-flex align-items-center" to={page.BROWSE + page.GENRE.replace(":genre", "movies")} > Movies</Link>
                     </span>
                 </div>
                 <div className="d-flex" >

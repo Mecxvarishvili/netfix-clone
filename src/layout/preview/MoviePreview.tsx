@@ -6,7 +6,6 @@ import PreviewBanner from './PreviewBanner';
 import PreviewFooter from './PreviewFooter';
 import PreviewMain from './PreviewMain';
 import SimilarMovies from './SimilarMovies';
-import page from '../../pages/page';
 
 const MoviePreview = () => {
     const [searchParams] = useSearchParams()
@@ -14,7 +13,6 @@ const MoviePreview = () => {
     const navigate = useNavigate()
     const location = useLocation()
 
-    console.log(searchParams.get("jbv"))
     const jbv = searchParams.get("jbv")
     
     useEffect(() => {

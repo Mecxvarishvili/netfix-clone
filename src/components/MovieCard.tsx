@@ -39,8 +39,15 @@ const MovieCard = ({data}: Props) => {
         }
     }
     function handleClick () {
-        setSearchParams({jbv: data.id})
+        const q = searchParams.get("q")
+        console.log(q)
+        if(q) {
+            setSearchParams({q, jbv: data.id})
+        } else {
+            setSearchParams({jbv: data.id})
+        }
     }
+
     
     return (
         <Col>
