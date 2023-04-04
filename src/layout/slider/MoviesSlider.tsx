@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Slider from "react-slick";
-import MovieCard from './MovieCard';
+import MovieCard from '../../components/MovieCard';
 import SliderArrow from './SliderArrow';
-import SliderLoader from './SliderLoader';
-import { MovieData } from './types';
+import SliderLoader from '../../components/SliderLoader';
+import { MovieData } from '../../components/types';
 interface Props {
     data: MovieData[],
 }

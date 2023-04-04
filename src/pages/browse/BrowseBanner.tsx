@@ -2,7 +2,6 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
 import { AiOutlineInfoCircle } from 'react-icons/ai';
-import {GrPlayFill } from 'react-icons/gr';
 import PlayButton from '../../components/PlayButton';
 
 interface Props {

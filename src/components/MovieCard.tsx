@@ -1,12 +1,13 @@
 import React, { useRef, useState } from 'react';
-import { Image } from 'react-bootstrap';
+import { Col, Image } from 'react-bootstrap';
 import { useAppDispatch } from '../store/hooks';
 import { setFocusCard } from '../store/focusCard/focusCardSlice';
 import { MovieData } from './types';
 import { useSearchParams } from 'react-router-dom';
 
 interface Props {
-    data: MovieData
+    data: MovieData,
+    className?: string,
 }
 
 const MovieCard = ({data}: Props) => {
@@ -42,9 +43,11 @@ const MovieCard = ({data}: Props) => {
     }
     
     return (
-        <div ref={contRef} className="movie-card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleClick} >
-            <Image className="w-100 h-100" src={data.img[0]} />
-        </div>
+        <Col>
+            <div ref={contRef} className="movie-card cursor-pointer" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleClick} >
+                <Image className="w-100 h-100" src={data.img[0]} />
+            </div>
+        </Col>
     );
 };
 
