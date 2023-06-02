@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import page from '../page';
 import ModalPage from '../modal/ModalPage';
 import BrowsePage from './BrowsePage';
-import ProfileSelect from './ProfileSelect';
+import ProfileSelectPage from './ProfileSelectPage';
 
 const BrowseRoutes = () => {
     return (
@@ -14,7 +14,7 @@ const BrowseRoutes = () => {
             </Routes>
             <BrowsePage />
         </div>
-        : <ProfileSelect />
+        : <ProfileSelectPage />
     );
 };
 

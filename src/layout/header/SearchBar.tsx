@@ -36,13 +36,6 @@ const SearchBar = () => {
         } 
     }, [isOpen])
 
-    /* useEffect(() => {
-        if(inputRef.current) {
-            setIsOpen(false)
-            inputRef.current.value = ''
-        }
-    },[location.pathname]) */
-
     function clearInput () {
         navigate(page.BROWSE)
         inputRef.current.focus()

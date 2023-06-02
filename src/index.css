@@ -16738,6 +16738,10 @@ body {
   background-color: rgba(51, 51, 51, 0.6);
 }
 
+.profile-select-page .profiles-cont .profile-cont {
+  flex-basis: 100px;
+}
+
 .not-found-page .logo {
   width: 93px;
   height: 25px;
