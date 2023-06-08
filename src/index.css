@@ -16738,8 +16738,21 @@ body {
   background-color: rgba(51, 51, 51, 0.6);
 }
 
+.profile-select-page .profiles-cont {
+  gap: 20px;
+}
 .profile-select-page .profiles-cont .profile-cont {
-  flex-basis: 100px;
+  flex-basis: 130px;
+}
+.profile-select-page .profiles-cont .profile-cont:hover {
+  color: white;
+}
+.profile-select-page .profiles-cont .profile-cont:hover .add-icon {
+  background-color: white;
+}
+.profile-select-page .profiles-cont .profile-cont:hover img {
+  border: 2px solid white;
+  width: 2000px;
 }
 
 .not-found-page .logo {

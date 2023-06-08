@@ -17,7 +17,8 @@ const SearchBar = () => {
         if(e.target.value) {
             if(location.pathname === page.SEARCH) {
                 e.preventDefault()
-                setSearchParams({q: e.target.value})
+                searchParams.set("q", e.target.value)
+                setSearchParams(searchParams)
             } else {
                     navigate({pathname:page.SEARCH, search: `?q=${e.target.value}`})
             }

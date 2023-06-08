@@ -39,13 +39,16 @@ const MovieCard = ({data}: Props) => {
         }
     }
     function handleClick () {
-        const q = searchParams.get("q")
+        /* const q = searchParams.get("q")
         console.log(q)
         if(q) {
             setSearchParams({q, jbv: data.id})
         } else {
             setSearchParams({jbv: data.id})
-        }
+        } */
+        searchParams.set("jbv", data.id)
+        setSearchParams(searchParams)
+
     }
 
     

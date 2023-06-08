@@ -7,7 +7,7 @@ import ProfileSelectPage from './ProfileSelectPage';
 
 const BrowseRoutes = () => {
     return (
-        false ?
+        true ?
         <div>
             <Routes>
                 <Route path={page.MODAL} element={<ModalPage />} />

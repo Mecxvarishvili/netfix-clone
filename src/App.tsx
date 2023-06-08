@@ -23,7 +23,7 @@ function App() {
         <Route path={page.LOGIN} element={<LogInPage/>}/>
         <Route path={page.SIGNUP} element={<SignUpPage/>}/>
       </Routes>
-      {/* <MoviePreview /> */} cont appear when choosing profile
+      <MoviePreview /> cont appear when choosing profile
       <MainFooter />
     </Router>
   );

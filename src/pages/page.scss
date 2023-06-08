@@ -98,8 +98,19 @@ body {
 //
 .profile-select-page {
     .profiles-cont {
+        gap: 20px;
         .profile-cont {
-            flex-basis: 100px;
+            flex-basis: 130px;
+            &:hover {
+                color: white;
+                .add-icon {
+                    background-color: white;
+                }
+                img {
+                    border: 2px solid white;
+                    width: 2000px;
+                }
+            }
         }
     }
     
