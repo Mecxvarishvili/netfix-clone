@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { MovieData } from '../../components/types';
+import { MovieData } from '../../../components/types';
 import ListSerialize from './ListSerialize';
-import MaturityRating from '../../components/MaturityRating';
-import page from '../../pages/page';
+import MaturityRating from '../../../components/MaturityRating';
+import page from '../../../pages/page';
 
 const PreviewFooter = ({data}: {data: MovieData}) => {
     return (

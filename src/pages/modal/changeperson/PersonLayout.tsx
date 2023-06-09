@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import API from '../../serialize/api';
+import API from '../../../serialize/api';
 import { useNavigate, useParams } from 'react-router-dom';
-import { MovieData } from '../../components/types';
-import page from '../../pages/page';
+import { MovieData } from '../../../components/types';
+import page from '../../../pages/page';
 import Row from 'react-bootstrap/Row';
 import { Col } from 'react-bootstrap';
-import MovieCard from '../../components/MovieCard';
+import MovieCard from '../../../components/MovieCard';
 import { BsArrowLeft } from 'react-icons/bs';
 import { RxCross2 } from 'react-icons/rx';
 

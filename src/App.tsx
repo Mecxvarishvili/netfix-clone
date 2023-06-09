@@ -8,7 +8,8 @@ import SearchPage from './pages/search/SearchPage';
 import MainFooter from './pages/browse/MainFooter';
 import BrowseRoutes from './pages/browse/BrowseRoutes';
 import MainHeader from './layout/header/MainHeader';
-import MoviePreview from "./layout/preview/MoviePreview";
+import MoviePreview from './pages/modal/changepreview/MoviePreview';
+import MoviePreviewModal from './pages/modal/preview/MoviePreviewModal';
 
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
         <Route path={page.LOGIN} element={<LogInPage/>}/>
         <Route path={page.SIGNUP} element={<SignUpPage/>}/>
       </Routes>
-      <MoviePreview /> cont appear when choosing profile
+      {/* <MoviePreview /> change and remove */}
+      {/* <MoviePreviewModal /> */}
       <MainFooter />
     </Router>
   );

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import API from '../../serialize/api';
-import { MovieData } from '../../components/types';
+import API from '../../../serialize/api';
+import { MovieData } from '../../../components/types';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import SimilarMovieListCard from './SimilarMovieListCard';

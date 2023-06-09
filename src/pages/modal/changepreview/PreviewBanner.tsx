@@ -1,7 +1,7 @@
 import React from 'react';
-import { MovieData } from '../../components/types';
+import { MovieData } from '../../../components/types';
 import Image from 'react-bootstrap/Image';
-import PlayButton from '../../components/PlayButton';
+import PlayButton from '../../../components/PlayButton';
 import { RxCross2 } from 'react-icons/rx';
 
 const PreviewBanner = ({data}: {data: MovieData}) => {

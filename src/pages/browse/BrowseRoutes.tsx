@@ -10,7 +10,8 @@ const BrowseRoutes = () => {
         true ?
         <div>
             <Routes>
-                <Route path={page.MODAL} element={<ModalPage />} />
+                {/* <Route path={page.MODAL} element={<ModalPage />} /> change and remove */}
+
             </Routes>
             <BrowsePage />
         </div>

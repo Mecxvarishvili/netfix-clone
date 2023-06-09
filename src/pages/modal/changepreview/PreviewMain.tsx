@@ -1,9 +1,9 @@
 import React from 'react';
-import { MovieData } from '../../components/types';
+import { MovieData } from '../../../components/types';
 import ListSerialize from './ListSerialize';
-import MatchScore from '../../components/MatchScore';
-import MaturityRating from '../../components/MaturityRating';
-import page from '../../pages/page';
+import MatchScore from '../../../components/MatchScore';
+import MaturityRating from '../../../components/MaturityRating';
+import page from '../../../pages/page';
 
 const PreviewMain = ({data}: {data: MovieData}) => {
     return (

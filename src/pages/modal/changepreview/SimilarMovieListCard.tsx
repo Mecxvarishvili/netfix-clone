@@ -1,9 +1,9 @@
 import React from 'react';
-import { MovieData } from '../../components/types';
+import { MovieData } from '../../../components/types';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import MatchScore from '../../components/MatchScore';
-import MaturityRating from '../../components/MaturityRating';
+import MatchScore from '../../../components/MatchScore';
+import MaturityRating from '../../../components/MaturityRating';
 
 interface Props {
     data: MovieData

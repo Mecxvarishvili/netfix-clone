@@ -5,6 +5,8 @@ import BrowseBanner from './BrowseBanner';
 import MovieCardFocus from '../../components/MovieCardFocus';
 import { useParams } from 'react-router-dom';
 import API from '../../serialize/api';
+import SliderLoader from '../../components/SliderLoader';
+import MoviePreviewModal from '../modal/preview/MoviePreviewModal';
 
 const BrowsePage = () => {
     const [ data, setData ] = useState([])
@@ -32,13 +34,14 @@ const BrowsePage = () => {
     
     return (
         <div className='bw-page min-vh-100' >
-            <Loader isLoading={isLoading} >
+            <SliderLoader isLoading={isLoading} >
                 <BrowseBanner data={data[1]} />
                 <MoviesSlider data={data}/>
                 <MoviesSlider data={data}/>
                 <MoviesSlider data={data}/>
-                <MovieCardFocus />
-            </Loader>
+                {/* <MovieCardFocus /> change and remove */}
+                <MoviePreviewModal />
+            </SliderLoader>
         </div>
     );
 };

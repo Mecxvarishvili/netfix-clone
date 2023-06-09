@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
-import API from '../../serialize/api';
-import { MovieData } from '../../components/types';
+import API from '../../../serialize/api';
+import { MovieData } from '../../../components/types';
 import PreviewBanner from './PreviewBanner';
 import PreviewFooter from './PreviewFooter';
 import PreviewMain from './PreviewMain';
