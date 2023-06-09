@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import API from '../../../serialize/api';
 import { MovieData } from '../../../components/types';
-import PreviewBanner from './PreviewBanner';
-import PreviewFooter from './PreviewFooter';
-import PreviewMain from './PreviewMain';
-import SimilarMovies from './SimilarMovies';
+import PreviewBanner from '../preview/PreviewBanner';
+import PreviewFooter from '../preview/PreviewFooter';
+import PreviewMain from '../preview/PreviewMain';
+import SimilarMovies from '../preview/SimilarMovies';
 
 const MoviePreview = () => {
     const [searchParams] = useSearchParams()

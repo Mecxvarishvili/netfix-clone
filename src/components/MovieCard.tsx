@@ -30,7 +30,7 @@ const MovieCard = ({data}: Props) => {
     function handleMouseEnter () {
         setIsSelected(setTimeout(() => {
             dispatchHandler()
-        }, 1000))
+        }, 300))
     }
 
     function handleMouseLeave () {

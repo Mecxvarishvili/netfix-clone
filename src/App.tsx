@@ -8,8 +8,8 @@ import SearchPage from './pages/search/SearchPage';
 import MainFooter from './pages/browse/MainFooter';
 import BrowseRoutes from './pages/browse/BrowseRoutes';
 import MainHeader from './layout/header/MainHeader';
-import MoviePreview from './pages/modal/changepreview/MoviePreview';
-import MoviePreviewModal from './pages/modal/preview/MoviePreviewModal';
+import MoviePreview from './layout/modal/changepreview/MoviePreview';
+import MoviePreviewModal from './layout/modal/preview/MoviePreviewModal';
 
 
 function App() {
